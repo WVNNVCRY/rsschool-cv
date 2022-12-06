@@ -38,4 +38,4 @@
 
 ### 7. **_MB of Bauman Moscow State Technical University_**
 
-8. _A2_
+8. **A2**
