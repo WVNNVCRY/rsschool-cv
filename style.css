@@ -1,0 +1,202 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+body {
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding-top: 10px;
+}
+
+.header__menu-item {
+  border: 1px solid;
+  padding: 30px;
+  border-color: #fff;
+  text-transform: uppercase;
+  transition: 0;
+}
+
+.header__menu-link {
+  padding: 30px;
+}
+
+.header__menu-item:hover {
+  color: #fff;
+  background-color: black;
+  transition: 1s;
+}
+
+.main {
+
+}
+
+.main__header-title {
+margin-bottom: 40px;
+}
+
+.main__about {
+  margin-bottom: 100px;
+}
+
+.main__about-title {
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main__about-text {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.main__skills {
+  margin-bottom: 100px;
+}
+
+.main__skills-inner {
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+}
+
+.main__skills-title {
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main__skills-item {
+  border: 1px solid gray;
+  border-radius: 30%;
+  padding: 40px;
+}
+
+.main__skills-name {
+  text-align: center;
+}
+
+.main__expirience {
+  margin-bottom: 100px;
+}
+
+.main__expirience-title {
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main__expirience-erly {
+  display: flex;
+  justify-content:center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.main__expirience-late {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.main__expirience-text {
+  max-width: 200px;
+  
+}
+
+.text__erly {
+  text-align: start;
+}
+
+.text__late {
+  text-align: end;
+}
+
+.main__expirience-img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.main__education {
+  margin-bottom: 100px;
+}
+
+.main__education-title {
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main__education-text {
+  max-width: 550px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main__education-eng {
+  max-width: 550px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.footer {
+  margin-bottom: 50px;
+}
+.footer__inner {
+display: flex;
+justify-content: start;
+}
+
+.footer__list {
+padding-left: 50px;
+}
+
+.footer__list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
