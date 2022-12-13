@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1220px;
   padding: 0 10px;
@@ -11,7 +15,11 @@
 }
 
 body {
-
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 14px;
 }
 
 a {
@@ -48,19 +56,18 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  padding-top: 10px;
 }
 
 .header__menu-item {
+  padding-top: 40px;
+  padding-bottom: 40px;
   border: 1px solid;
-  padding: 30px;
   border-color: #fff;
   text-transform: uppercase;
-  transition: 0;
 }
 
 .header__menu-link {
-  padding: 30px;
+  padding: 40px;
 }
 
 .header__menu-item:hover {
@@ -75,12 +82,11 @@ margin-bottom: 20px;
 
 .main__header-text {
   margin-bottom: 20px;
+  text-decoration: underline;
 }
 
 .main__header-img {
   position: absolute;
-  width: 40px;
-  height: 40px;
   width: 300px;
   height: 300px;
   top: 150px;
@@ -103,9 +109,9 @@ margin-bottom: 20px;
 }
 
 .main__about-text {
-  max-width: 550px;
+  max-width: 600px;
   margin-right: auto;
-  text-align: justify;
+  text-align: left;
 }
 
 .main__about-text:nth-child(2) {
@@ -115,7 +121,8 @@ margin-bottom: 20px;
 }
 
 .main__skills {
-  margin-bottom: 200px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 100px;
 }
 
 .main__skills-inner {
@@ -192,6 +199,7 @@ margin-bottom: 20px;
 .main__expirience {
   border-right: 1px solid #000;
   padding-right: 200px;
+  padding-top: 100px;
 }
 
 .main__expirience-title {
@@ -214,7 +222,7 @@ margin-bottom: 20px;
   gap: 50px;
   position: relative;
   right: 110px;
-  bottom: 104px;
+  bottom: 122px;
 }
 
 .main__expirience-text {
@@ -239,6 +247,7 @@ margin-bottom: 20px;
   margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 100px;
 }
 
 .main__education-text {
@@ -258,11 +267,15 @@ margin-bottom: 20px;
   text-align: center;
 }
 
+.main__code-pre {
+  text-align: center;
+  padding-right: 100px;
+}
+
 .main__code {
   border: 1px solid #000;
   padding-top: 50px;
   border-top: none;
-  margin-bottom: 15px;
 }
 
 .main__code-title {
@@ -291,3 +304,4 @@ gap: 10px;
 .footer__list-item:not(:last-child) {
   margin-bottom: 10px;
 }
+

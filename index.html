@@ -15,10 +15,11 @@
         <img class="header__img" src="image/logo.jpg" alt="logo.img" width="100" height="100">
         <nav class="header__menu">
           <ul class="header__menu-list">
-            <li class="header__menu-item"><a href="#" class="header__menu-link">About</a></li>
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Skills</a></li>
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Expirience</a></li>
-            <li class="header__menu-item"><a href="#" class="header__menu-link">Education</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#about" >About</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#skills" >Skills</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#expirience">Expirience</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#education">Education</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="#code">Code example</a></li>
           </ul>
         </nav>
       </div>
@@ -27,15 +28,15 @@
   <main class="main">
     <div class="container">
         <h1 class="main__header-title">Artem Atari</h1>
-        <p class="main__header-text">Begginer Frontend-developer</p>
+        <p class="main__header-text">Begginer Front-End Developer</p>
         <img class="main__header-img" src="image/header-img.png" alt="header.img">
-      <section class="main__about">
+      <section class="main__about" id="about">
         <h2 class="main__about-title">About</h2>
-        <p class="main__about-text"><b>Hello!</b> My name's Artem and I am begginer Frontend-developer. Based from Moscow, Russia. In 2020, I gratuated from Bauman Moscow State Technical University. My current profession no longer seems intresting to me and I want to try something new. The visual result is important in the work, so I was intrested in front-end development.</p>
+        <p class="main__about-text"><b>Hello!</b> My name is Artem and I am a begginer Frontend-developer. Based in Moscow, Russia. In 2020, I gratuated from Bauman Moscow State Technical University. My current profession no longer intresting to me and I want to try something new. The visual result is important in the work, so I was intresting in front-end development.</p>
         <p class="main__about-text"><b>My</b> goal is to acquire new skills and be able to apply them. The point of satisfaction of the goal will be the moment of employment in an IT company. It is difficult to name my strengths, but I know for sure that I have a great desire and motivation. </p>
       </section>
       <section class="main__skills">
-        <h2 class="main__skills-title">Skills</h2>
+        <h2 class="main__skills-title" id="skills">Skills</h2>
         <div class="main__skills-inner">
           <div class="main__skills-item">
             <img class="main__skills-img" src="image/html-solid.png" alt="html" width="200" height="200">
@@ -77,7 +78,7 @@
       </section>
       <div class="main__bottom-inner">
         <section class="main__expirience">
-          <h2 class="main__expirience-title">Expirience</h2>
+          <h2 class="main__expirience-title" id="expirience">Expirience</h2>
           <div class="main__expirience-erly">
             <p class="main__expirience-text text__erly"><b>As</b> for my working experience, I have never worked in development sphere before, but I worked in engineering and this work gave me an opportunity to improve my skills in using computer, challenge with new hard tasks, delve into the issues, and communicate with different people.</p>
           </div>
@@ -86,30 +87,26 @@
           </div>
         </section>
         <section class="main__education">
-          <h2 class="main__education-title">Education</h2>
-          <p class="main__education-text">2016-2020</p>
+          <h2 class="main__education-title" id="education">Education</h2>
+          <p class="main__education-text"><b>2016-2020</b></p>
           <p class="main__education-text">Bauman Moscow State Technical University</p>
-          <p class="main__education-text">2018-2020</p>
-          <p class="main__education-text">Maria's Publick School</p>
+          <p class="main__education-text"><b>2018-2020</b></p>
+          <p class="main__education-text">Maria's Public School</p>
           <h3 class="main__education-title">English Skills</h3>
-          <p class="main__education-eng">My english skills is on B1 level and I improve it day-by-day learning grammar, words, training listening and writing.</p>
+          <p class="main__education-eng">My english skills is on B1 level and I improve it through  day-by-day learning grammar, words, training listening and writing.</p>
         </section>
       </div>
       <section class="main__code">
-        <h2 class="main__code-title">Code example</h2>
+        <h2 class="main__code-title" id="code">Code example</h2>
         <pre class="main__code-pre">
           <code class="main__code-text">
-            "function peak(arr) {
-
-              for (let i = 1; i < arr.length - 1; i++) {
-                let leftSum = arr.slice(0, i).reduce((accumulator, currentValue) => accumulator + currentValue);
-                let rightSum = arr.slice(i + 1).reduce((accumulator, currentValue) => accumulator + currentValue);
-            
-                if (leftSum === rightSum) return i;
-              }
-              return -1;""
-            }
-          </code>
+            function checkParent (src, dest) {<Br>
+              while (src != null) {<Br>
+                if (src.tagName == dest) return src<Br>
+                 src = src.parentElement<Br>
+              }<Br>
+              return null<Br>
+             }</code>
         </pre>
       </section>
     </div>
