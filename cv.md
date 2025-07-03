@@ -10,7 +10,8 @@
 
 ### The hashtag generator (JavaScript):
 
-```function generateHashtag (str) {
+```
+function generateHashtag (str) {
 if (str === '' || str.replaceAll(' ', '') === '') {
 return false
 }
