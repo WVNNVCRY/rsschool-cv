@@ -30,7 +30,7 @@ return '#' + arr
 };
 ```
 
-### Experience: Not yet;
+### Experience: [CV](https://WVNNVCRY.github.io/rsschool-cv/cv);
 
 ### Education: MB of Bauman Moscow State Technical University;
 
