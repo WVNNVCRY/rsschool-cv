@@ -28,3 +28,9 @@ return false
 return '#' + arr
 };
 ```
+
+### Experience: Not yet;
+
+### Education: MB of Bauman Moscow State Technical University;
+
+### English level: A2;
