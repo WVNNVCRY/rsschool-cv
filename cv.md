@@ -8,7 +8,7 @@
 
 ### Skills: HTML5, CSS3, JavaScript (ES6+);
 
-### The hashtag generator (JavaScript):
+### The hashtag generator (JavaScript): [task](https://www.codewars.com/kata/52449b062fb80683ec000024)
 
 ```
 function generateHashtag (str) {
