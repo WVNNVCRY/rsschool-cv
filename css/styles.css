@@ -34,7 +34,6 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 30px;
-  background-color: #f8f9fa;
 }
 
 .header__top {
@@ -86,7 +85,6 @@ li {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #150ad9;
 }
 
 .main {
@@ -167,5 +165,4 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
 }
