@@ -22,7 +22,7 @@
             <li class="header__item"><a href="#about" class="header__link">About</a></li>
             <li class="header__item"><a href="#education" class="header__link">Education</a></li>
             <li class="header__item"><a href="#skills" class="header__link">Skills</a></li>
-            <li class="header__item"><a href="#contact" class="header__link">Contact</a></li>
+            <li class="header__item"><a href="#code" class="header__link">Code Example</a></li>
           </ul>
         </nav>
       </div>
@@ -48,7 +48,7 @@
     <div class="container">
       <div class="main__inner">
         <div class="main__col-left">
-          <section class="about">
+          <section class="about" id="about">
             <div class="about__description">
               <p>As an aspiring frontend developer, I am driven by a passion for creating user-friendly, visually
                 appealing,
@@ -67,7 +67,7 @@
           </section>
         </div>
         <div class="main__col-right">
-          <section class="education">
+          <section class="education" id="education">
             <h2 class="education__title">Education</h2>
             <div class="education__list">
               <ul class="education__date">
@@ -80,7 +80,7 @@
               </ul>
             </div>
           </section>
-          <section class="skills">
+          <section class="skills" id="skills">
             <h2 class="education__title">Skills</h2>
             <div class="skills__list">
               <ul class="skills__score">
@@ -99,7 +99,7 @@
           </section>
           <section class="code">
             <h2 class="code__title">Code Example</h2>
-            <div class="code__example">
+            <div class="code__example" id="code">
               <pre class="code__text">
 function generateHashtag (str) {
   if (str === '' || str.replaceAll(' ', '') === '') {
