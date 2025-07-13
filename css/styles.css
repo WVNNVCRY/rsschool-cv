@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #150ad9;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  gap: 320px;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__subtitle {
+  width: 100%;
+}
+
+.header__contacts {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  width: 100%;
+}
+
+.header__social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right;
+}
+
+.header__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #150ad9;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main__inner {
+  display: flex;
+  width: 100%;
+}
+
+.main__col-left {
+  width: 50%;
+  padding: 20px;
+  margin-right: 50px;
+}
+
+.main__col-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  gap: 50px;
+}
+
+.indent-1 {
+  margin-left: 20px;
+}
+
+.indent-2 {
+  margin-left: 40px;
+}
+
+.indent-3 {
+  margin-left: 40px;
+}
+
+.indent-4 {
+  margin-left: 60px;
+}
+
+.education,
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education__list,
+.skills__list {
+  display: flex;
+  gap: 50px;
+}
+
+.education__date,
+.skills__score,
+.education__name,
+.skills__name {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.education__date,
+.skills__score {
+  width: 100px;
+}
+
+.code__title {
+  margin-bottom: 20px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
