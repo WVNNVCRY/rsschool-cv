@@ -3,10 +3,18 @@
   margin: 0;
   padding: 0;
   color: #150ad9;
+  font-family: 'Roboto Mono', monospace;
 }
 
 ul {
   list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 700;
 }
 
 a {
@@ -33,7 +41,8 @@ li {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
+  margin-bottom: 100px;
 }
 
 .header__top {
@@ -41,6 +50,13 @@ li {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.header__title {
+  max-width: 250px;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .header__nav {
@@ -50,11 +66,17 @@ li {
 
 .header__list {
   display: flex;
-  gap: 320px;
+  gap: 200px;
 }
 
 .header__link {
   text-decoration: none;
+
+}
+
+.header__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .header__bottom {
@@ -128,6 +150,23 @@ li {
   margin-left: 60px;
 }
 
+.about {
+  position: relative;
+}
+
+.about__description {
+  position: absolute;
+  width: 600px;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about__img {
+  margin-left: 300px;
+  margin-top: 400px;
+}
+
 .education,
 .skills {
   display: flex;
@@ -153,7 +192,7 @@ li {
 
 .education__date,
 .skills__score {
-  width: 100px;
+  width: 150px;
 }
 
 .code__title {
@@ -165,4 +204,9 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  text-align: center;
 }
