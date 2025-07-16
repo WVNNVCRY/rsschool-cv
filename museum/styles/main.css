@@ -197,5 +197,23 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+:root {
+  --color-bg-dark: #030303;
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-accent: #710707;
+  --color-gold: #9d8665;
+  --color-gold-dark: #7E6C51;
+  --font-family-base: "Roboto", sans-serif;
+  --font-second-family: "Forum", sans-serif;
+  --container-width: 90rem;
+  --container-padding-x: 1.25rem;
+  --transitionduration: 0.2s;
+}
+@media (width <= 90.06125rem) {
+  :root {
+    --container-width: 61.5rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
