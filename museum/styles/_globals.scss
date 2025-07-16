@@ -1,1 +1,75 @@
 @use 'helpers' as *;
+
+body {
+  @include fluid-text(28, 16);
+
+  font-family: var(--font-family-base);
+  color: var(--color-light);
+  background-color: var(--color-bg-dark);
+}
+
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h6,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-second-family);
+  color: var(--color-gold);
+  font-weight: 400;
+}
+
+h1,
+.h1 {
+  @include fluid-text(80, 28);
+
+}
+
+h2,
+.h2 {
+  @include fluid-text(80, 28);
+}
+
+h3,
+.h3 {
+  @include fluid-text(32, 18);
+}
+
+h4,
+.h4 {
+  @include fluid-text(28, 16);
+}
+
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: var(--color-light);
+
+  &[class] {
+    text-decoration: none;
+  }
+
+  @include hover {
+    color: var(--color-gold);
+  }
+
+  &:active {
+    color: var(--color-gold-dark)
+  }
+}
