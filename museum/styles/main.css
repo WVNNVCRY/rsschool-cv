@@ -269,6 +269,7 @@ h6,
   font-family: var(--font-second-family);
   color: var(--color-gold);
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 h1,
