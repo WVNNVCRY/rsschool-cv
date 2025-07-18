@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+
+.header {
+  padding-block: rem(58);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__overlay {
+    @include tablet-above {
+      display: contents;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(55);
+    font-size: rem(22);
+    font-weight: 100;
+    letter-spacing: rem(2);
+  }
+}
