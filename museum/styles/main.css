@@ -451,4 +451,38 @@ a:active {
   font-size: clamp(1rem, 0.965rem + 0.1333333333vw, 1.125rem);
 }
 
+.explore {
+  padding-top: 4.6875rem;
+}
+.explore__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.75rem;
+}
+.explore__content {
+  max-width: 41.25rem;
+}
+.explore__title {
+  color: var(--color-light);
+  line-height: 1.12;
+  letter-spacing: 0.3125rem;
+  padding-bottom: 1.5625rem;
+  border-bottom: 0.1875rem solid var(--color-accent);
+  margin-bottom: 4.6875rem;
+}
+.explore__descr {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+.explore__descr p {
+  font-weight: 300;
+  font-size: clamp(1rem, 0.895rem + 0.4vw, 1.375rem);
+}
+.explore__descr span {
+  color: #CAAA7D;
+}
+
 /*# sourceMappingURL=main.css.map */
