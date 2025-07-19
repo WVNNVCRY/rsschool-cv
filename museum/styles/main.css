@@ -345,6 +345,11 @@ a:active {
   letter-spacing: 0.125rem;
 }
 
+@keyframes show {
+  0% {
+    opacity: 10%;
+  }
+}
 .slider-container {
   display: flex;
   align-items: center;
@@ -360,6 +365,18 @@ a:active {
   width: 62.5rem;
   height: 46.875rem;
   overflow: hidden;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.slider-img.block {
+  display: block;
+  animation: show 2.5s 1;
+  margin: 0 auto;
 }
 
 .slider-controls {

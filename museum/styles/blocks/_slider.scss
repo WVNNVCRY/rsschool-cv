@@ -1,5 +1,11 @@
 @use '../helpers' as *;
 
+@keyframes show {
+  0% {
+    opacity: 10%;
+  }
+}
+
 .slider-container {
   display: flex;
   align-items: center;
@@ -16,6 +22,19 @@
   width: rem(1000);
   height: rem(750);
   overflow: hidden;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+
+  &.block {
+    display: block;
+    animation: show 2.5s 1;
+    margin: 0 auto;
+  }
 }
 
 .slider-controls {
