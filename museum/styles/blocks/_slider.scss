@@ -1,0 +1,115 @@
+@use '../helpers' as *;
+
+@keyframes show {
+  0% {
+    opacity: 0%;
+  }
+
+  25% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  75% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: absolute;
+  top: 0;
+  right: rem(20);
+}
+
+.slider-images {
+  position: relative;
+  width: rem(1000);
+  height: rem(750);
+  overflow: hidden;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+
+  &.block {
+    display: block;
+    animation: show 5s 1;
+    margin: 0 auto;
+  }
+}
+
+.slider-controls {
+  position: absolute;
+  right: 0;
+  bottom: rem(-60);
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-dark);
+  width: rem(600);
+  height: rem(120);
+
+  &__count {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    font-size: fluid(22, 16);
+    line-height: 1.82;
+    margin-right: rem(55);
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    gap: rem(25);
+    margin-right: rem(60);
+  }
+
+  &__dot {
+    @include square(rem(16));
+
+    background-color: var(--color-light);
+    cursor: pointer;
+
+    &.active {
+      background-color: var(--color-gold);
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  &__arrow {
+    all: unset;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & path {
+      transition-duration: var(--transitionduration);
+    }
+
+    @include hover {
+      & path {
+        fill: var(--color-gold)
+      }
+    }
+  }
+}
