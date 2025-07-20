@@ -643,7 +643,7 @@ a:active {
 
 .tickets {
   background-color: var(--color-light);
-  padding-top: 4.6875rem;
+  padding-block: 4.6875rem;
 }
 .tickets__title {
   padding-bottom: 1.5625rem;
