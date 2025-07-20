@@ -30,6 +30,14 @@
     letter-spacing: rem(2);
   }
 
+  &__link {
+    transition-duration: var(--transitionduration);
+
+    @include hover {
+      color: var(--color-gold)
+    }
+  }
+
   &__separator {
     position: relative;
     height: rem(100);
@@ -64,6 +72,14 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: rem(50);
+
+    &-link {
+      transition-duration: var(--transitionduration);
+
+      @include hover {
+        color: var(--color-gold)
+      }
+    }
 
     & p {
       font-weight: 100;

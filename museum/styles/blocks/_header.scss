@@ -26,4 +26,12 @@
     font-weight: 100;
     letter-spacing: rem(2);
   }
+
+  &__link {
+    transition-duration: var(--transitionduration);
+
+    @include hover {
+      color: var(--color-gold);
+    }
+  }
 }
