@@ -641,6 +641,43 @@ a:active {
   pointer-events: none;
 }
 
+.gallery {
+  background-color: var(--color-dark);
+  height: 2125px;
+  position: relative;
+}
+.gallery__inner {
+  overflow: hidden;
+  height: 100%;
+}
+.gallery__title {
+  color: var(--color-light);
+  margin-bottom: 4.6875rem;
+}
+.gallery__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  column-gap: 2.25rem;
+}
+.gallery__content-col {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+.gallery__content-col.indent {
+  padding-top: 3.125rem;
+}
+.gallery__gradient {
+  position: absolute;
+  top: calc(100% - 22.5rem);
+  height: 22.5rem;
+  width: 100%;
+  background: linear-gradient(360deg, var(--color-dark) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 .tickets {
   background-color: var(--color-light);
   padding-block: 4.6875rem;
