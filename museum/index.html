@@ -151,14 +151,27 @@
               it looked different.</p>
           </div>
         </div>
-        <div class="img-comp-container">
-          <div class="img-comp-img">
-            <img src="./assets/img/explore-slider/before.jpg" alt="before cleaning" width="720" height="700">
+        <div class="comp-slider__container">
+          <div class="comp-slider__image-container">
+            <img src="./assets/img/explore-slider/before.jpg" alt="before cleaning"
+              class="comp-slider__image comp-slider__image--before">
+            <img src="./assets/img/explore-slider/after.jpg" alt="after cleaning"
+              class="comp-slider__image comp-slider__image--after">
           </div>
-          <div class="img-comp-img img-comp-overlay">
-            <img src="./assets/img/explore-slider/after.jpg" alt="after cleaning" width="720" height="700">
+          <input type="range" min="0" max="100" value="50" class="comp-slider__range" id="comp-slider"
+            aria-label="Procentage of cleaning" title="Percentage of cleaning">
+          <div class="comp-slider__line"></div>
+          <div class="comp-slider__button" aria-hidden="true">
+            <svg width="40" height="700" viewBox="0 0 39 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.5 365C27.5081 365 34 358.508 34 350.5C34 342.492 27.5081 336 19.5 336C11.4919 336 5 342.492 5 350.5C5 358.508 11.4919 365 19.5 365ZM19.5 370C30.2696 370 39 361.27 39 350.5C39 339.73 30.2696 331 19.5 331C8.73045 331 0 339.73 0 350.5C0 361.27 8.73045 370 19.5 370Z"
+                fill="white" />
+              <path d="M17 0H22V332H17V0Z" fill="white" />
+              <path d="M17 368H22V700H17V368Z" fill="white" />
+            </svg>
           </div>
         </div>
+      </div>
       </div>
     </section>
 

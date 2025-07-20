@@ -1,12 +1,12 @@
 @use '../helpers' as *;
 
 .explore {
-  padding-top: rem(75);
+  padding-block: rem(75);
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: rem(60);
   }
 
