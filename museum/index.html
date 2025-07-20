@@ -183,45 +183,45 @@
           <img src="./assets/img/tickets-img.jpg" alt="art" class="tickets__img">
           <div class="tickets__form">
             <div class="tickets__type">
-              <h4 class="tickets__type-title">Tickets Type</h4>
-              <ul class="tickets__list">
-                <li class="tickets__list-item">
-                  <input type="checkbox" class="tickets__list-input">
-                  <p class="tickets__list-descr">
-                    Permanent exhibition
-                  </p>
-                </li>
-                <li class="tickets__list-item">
-                  <input type="checkbox" class="tickets__list-input">
-                  <p class="tickets__list-descr">
-                    Temporary exhibition
-                  </p>
-                </li>
-                <li class="tickets__list-item">
-                  <input type="checkbox" class="tickets__list-input">
-                  <p class="tickets__list-descr">
-                    Combined Admission
-                  </p>
-                </li>
-              </ul>
+              <h4 class="tickets__type-title tickets__form-title">Tickets Type</h4>
+              <form action="" class="tickets__type-form">
+                <div class="tickets__type-form--row">
+                  <input id="radio-perv" type="radio" class="tickets__type-form--input custome-radio-hidden"
+                    name="ticket-type">
+                  <div class="custome-radio"></div>
+                  <label for="radio-perv" class="tickets__type-form--label">Permanent exhibition</label>
+                </div>
+                <div class="tickets__type-form--row">
+                  <input id="radio-temp" type="radio" class="tickets__type-form--input custome-radio-hidden"
+                    name="ticket-type">
+                  <div class="custome-radio"></div>
+                  <label for="radio-temp" class="tickets__type-form--label">Temporary exhibition</label>
+                </div>
+                <div class="tickets__type-form--row">
+                  <input id="radio-comb" type="radio" class="tickets__type-form--input custome-radio-hidden"
+                    name="ticket-type">
+                  <div class="custome-radio"></div>
+                  <label for="radio-comb" class="tickets__type-form--label">Combined Admission</label>
+                </div>
+              </form>
             </div>
             <div class="tickets__amount">
-              <h4 class="tickets__amount-title">Amount</h4>
+              <h4 class="tickets__amount-title tickets__form-title">Amount</h4>
               <div class="tickets__amount-counter">
                 <div class="tickets__amount-counter--basic">
                   <p class="tickets__amount-counter--descr">Basic 18+</p>
                   <div class="tickets__amount-counter--count">
-                    <p>-</p>
-                    <p>1</p>
-                    <p>+</p>
+                    <p class="decrement">-</p>
+                    <p class="count">1</p>
+                    <p class="increment">+</p>
                   </div>
                 </div>
                 <div class="tickets__amount-counter--senior">
                   <p class="tickets__amount-counter--descr">Senior 65+</p>
                   <div class="tickets__amount-counter--count">
-                    <p>-</p>
-                    <p>1</p>
-                    <p>+</p>
+                    <p class="decrement">-</p>
+                    <p class="count">1</p>
+                    <p class="increment">+</p>
                   </div>
                 </div>
               </div>
@@ -308,6 +308,7 @@
     </footer>
   </main>
   <script src="./scripts/welcome-slider.js"></script>
+  <script src="./scripts/custome-radio.js"></script>
 </body>
 
 </html>
