@@ -651,39 +651,40 @@ a:active {
 
 .gallery {
   background-color: var(--color-dark);
-  height: 2125px;
-  position: relative;
-}
-.gallery__inner {
-  overflow: hidden;
-  height: 100%;
+  padding-top: 4.6875rem;
 }
 .gallery__title {
   color: var(--color-light);
   margin-bottom: 4.6875rem;
 }
 .gallery__content {
+  height: 122.5rem;
+  overflow: hidden;
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 2.25rem;
 }
 .gallery__content-col {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  align-items: center;
   row-gap: 1.5rem;
 }
 .gallery__content-col.indent {
   padding-top: 3.125rem;
 }
-.gallery__gradient {
+.gallery__content::after {
+  content: "";
   position: absolute;
-  top: calc(100% - 22.5rem);
-  height: 22.5rem;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  background: linear-gradient(360deg, var(--color-dark) 0%, rgba(0, 0, 0, 0) 100%);
+  height: 24rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--color-dark) 100%);
+}
+.gallery__img {
+  width: 100%;
+  display: block;
 }
 
 .tickets {
