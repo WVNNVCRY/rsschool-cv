@@ -51,6 +51,11 @@
         font-size: fluid(22, 16);
         color: var(--color-dark);
         font-weight: 300;
+        transition-duration: var(--transitionduration);
+
+        &:hover {
+          color: var(--color-gold);
+        }
       }
     }
   }
