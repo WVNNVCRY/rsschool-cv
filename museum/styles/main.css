@@ -538,6 +538,10 @@ a:active {
   flex-wrap: wrap;
   row-gap: 4.6875rem;
 }
+.visiting__card-link {
+  display: flex;
+  flex-direction: column;
+}
 .visiting__card-img {
   margin-bottom: 1.5625rem;
 }
@@ -554,8 +558,9 @@ a:active {
   bottom: 0;
   left: 0%;
   width: 18.75rem;
-  height: 2px;
+  height: 0.125rem;
   background-color: var(--color-accent);
+  transition-duration: var(--transitionduration);
 }
 .visiting__card-virtual, .visiting__card-descr {
   color: var(--color-dark);
@@ -568,6 +573,9 @@ a:active {
 }
 .visiting__card-descr {
   font-size: clamp(1rem, 0.965rem + 0.1333333333vw, 1.125rem);
+}
+.visiting__card:hover .visiting__card-title::after {
+  width: 100%;
 }
 
 .explore {
