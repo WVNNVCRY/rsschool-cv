@@ -819,6 +819,9 @@ a:active {
 }
 .tickets__amount-counter {
   margin-bottom: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
 }
 .tickets__amount-counter--basic, .tickets__amount-counter--senior {
   display: flex;
