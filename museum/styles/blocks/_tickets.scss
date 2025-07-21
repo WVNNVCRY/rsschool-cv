@@ -1,0 +1,140 @@
+@use '../helpers' as *;
+
+.tickets {
+  background-color: var(--color-light);
+  padding-block: rem(75);
+
+  &__title {
+    padding-bottom: rem(25);
+    border-bottom: rem(3) solid var(--color-accent);
+    margin-bottom: rem(75);
+    letter-spacing: rem(5);
+    line-height: 1.12;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(60);
+  }
+
+  &__img {
+    width: rem(720);
+    height: rem(550);
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &-title {
+      font-family: var(--font-family-base);
+      font-weight: 700;
+      font-size: fluid(28, 16);
+      text-transform: none;
+      color: var(--color-dark);
+      line-height: 0.95;
+    }
+  }
+
+  &__type {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
+
+    &-form {
+      &--row {
+        display: flex;
+        align-items: center;
+        gap: rem(23);
+      }
+
+      &--label {
+        color: var(--color-dark);
+        font-weight: 300;
+        font-size: rem(22);
+      }
+    }
+  }
+
+  &__amount {
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    &-title {
+      margin-bottom: rem(25);
+    }
+
+    &-counter {
+      margin-bottom: rem(50);
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+
+      &--basic,
+      &--senior {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15);
+      }
+
+      &--senior {
+        margin-bottom: rem(10);
+      }
+
+      &--descr {
+        font-weight: 300;
+        font-size: fluid(22, 16);
+      }
+
+      &--count {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        width: rem(150);
+        border: rem(3) solid var(--color-dark);
+        padding: rem(12) rem(14);
+        height: rem(50);
+
+        & .decrement,
+        & .increment {
+          font-size: rem(32);
+          align-self: center;
+        }
+
+        & .count {
+          font-size: rem(22);
+          font-weight: 300;
+          align-self: center;
+        }
+      }
+    }
+
+    &-price {
+      margin-bottom: rem(60);
+      font-weight: 700;
+      font-size: fluid(28, 16);
+    }
+
+    &-btn {
+      height: rem(50);
+      width: rem(175);
+      padding: 0;
+      color: var(--color-light);
+      background-color: var(--color-dark);
+      font-size: rem(22);
+      font-weight: 300;
+      letter-spacing: rem(2);
+      border: none;
+      transition-duration: var(--transitionduration);
+
+      @include hover {
+        color: var(--color-dark);
+        background-color: var(--color-gold);
+      }
+    }
+  }
+}

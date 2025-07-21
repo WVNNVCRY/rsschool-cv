@@ -1,0 +1,72 @@
+@use '../helpers' as *;
+
+.visiting {
+  background-color: var(--color-light);
+  padding-bottom: rem(75);
+
+  &__title {
+    border-bottom: 3px solid var(--color-accent);
+    margin-bottom: rem(75);
+    padding-top: rem(75);
+    line-height: 1.12;
+    letter-spacing: rem(5);
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: rem(75);
+  }
+
+  &__card {
+    &-link {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-img {
+      margin-bottom: rem(25);
+    }
+
+    &-title {
+      position: relative;
+      color: var(--color-dark);
+      letter-spacing: rem(5);
+      padding-bottom: rem(10);
+      margin-bottom: rem(10);
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        width: rem(300);
+        height: rem(2);
+        background-color: var(--color-accent);
+        transition-duration: var(--transitionduration);
+      }
+    }
+
+    &-virtual,
+    &-descr {
+      color: var(--color-dark);
+      line-height: 1.5;
+      font-weight: 200;
+
+    }
+
+    &-virtual {
+      font-size: fluid(22, 16);
+      margin-bottom: rem(10);
+    }
+
+    &-descr {
+      font-size: fluid(18, 16);
+    }
+
+    &:hover &-title::after {
+      width: 100%;
+    }
+  }
+}

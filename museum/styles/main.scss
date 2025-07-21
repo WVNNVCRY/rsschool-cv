@@ -1,0 +1,21 @@
+@use 'normalize';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/header';
+@use 'blocks/slider';
+@use 'blocks/button';
+@use 'blocks/burger-button';
+@use 'blocks/logo';
+@use 'blocks/welcome';
+@use 'blocks/visiting';
+@use 'blocks/explore';
+@use 'blocks/comp-slider';
+@use 'blocks/video';
+@use 'blocks/gallery';
+@use 'blocks/tickets';
+@use 'blocks/custome-radio';
+@use 'blocks/paralax';
+@use 'blocks/contacts';
+@use 'blocks/footer';

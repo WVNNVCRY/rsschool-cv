@@ -1,0 +1,85 @@
+@use '../helpers' as *;
+
+.video {
+  background-color: var(--color-light);
+  padding-bottom: rem(75);
+
+  &__header {
+    padding-top: rem(75);
+    margin-bottom: rem(75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__descr {
+    max-width: rem(720);
+    color: var(--color-dark);
+    font-weight: 300;
+    font-size: rem(22);
+  }
+
+  &__player {
+    position: relative;
+    height: rem(650);
+    width: 100%;
+
+    & button {
+      all: unset;
+    }
+
+    &-icon img {
+      @include abs-center;
+
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(25);
+    background-color: var(--color-dark);
+    margin-bottom: rem(40);
+
+    & button {
+      all: unset
+    }
+  }
+
+  &__slider {
+
+    &-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: rem(40);
+    }
+
+    &-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(20);
+    }
+
+    &-dots {
+      display: flex;
+      justify-content: center;
+      gap: rem(20);
+    }
+
+    &-dot {
+      content: '';
+      @include square(rem(12));
+
+      background-color: var(--color-gray);
+      border: none;
+      border-radius: 50%;
+
+      &.active {
+        background-color: var(--color-dark-gray);
+      }
+    }
+  }
+}
