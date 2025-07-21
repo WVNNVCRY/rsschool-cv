@@ -20,6 +20,11 @@
   }
 
   &__card {
+    &-link {
+      display: flex;
+      flex-direction: column;
+    }
+
     &-img {
       margin-bottom: rem(25);
     }
@@ -37,8 +42,9 @@
         bottom: 0;
         left: 0%;
         width: rem(300);
-        height: 2px;
+        height: rem(2);
         background-color: var(--color-accent);
+        transition-duration: var(--transitionduration);
       }
     }
 
@@ -57,6 +63,10 @@
 
     &-descr {
       font-size: fluid(18, 16);
+    }
+
+    &:hover &-title::after {
+      width: 100%;
     }
   }
 }
