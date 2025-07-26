@@ -87,7 +87,6 @@ p:where(:not([class]):not(:last-child)) {
 img,
 video {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 
@@ -615,40 +614,51 @@ a:active {
   color: #CAAA7D;
 }
 
-.comp-slider__container {
+.comp__container {
   position: relative;
-  display: grid;
-  place-content: center;
+  display: inline-block;
   overflow: hidden;
-  --position: 50%;
 }
-.comp-slider__image-container {
-  max-width: 45rem;
-  max-height: 43.75rem;
-}
-.comp-slider__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.comp-slider__image--before {
+.comp__before {
   position: absolute;
-  inset: 0;
-  width: var(--position);
+  width: 61%;
+  overflow: hidden;
 }
-.comp-slider__range {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  cursor: ew-resize;
+.comp__before img {
+  width: auto;
 }
-.comp-slider__button {
+.comp__btn {
   position: absolute;
-  inset: 0;
-  z-index: 10;
-  left: calc(var(--position) - 1.25rem);
-  pointer-events: none;
+  top: 50%;
+  left: 61.7%;
+  transform: translate(-61%, -50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0.3125rem solid var(--color-light);
+  cursor: col-resize;
+  z-index: 2;
+}
+.comp__btn::before {
+  content: "";
+  position: absolute;
+  top: 2.1875rem;
+  left: 43%;
+  width: 0.3125rem;
+  height: 21.875rem;
+  background-color: var(--color-light);
+  z-index: 1;
+}
+.comp__btn::after {
+  content: "";
+  position: absolute;
+  bottom: 2.1875rem;
+  left: 43%;
+  width: 0.3125rem;
+  height: 21.875rem;
+  background-color: var(--color-light);
+  z-index: 1;
 }
 
 .video {
