@@ -410,6 +410,11 @@ a:active {
   .slider-container {
     position: relative;
     right: 0;
+    margin-bottom: 7.5rem;
+  }
+}
+@media (width <= 26.31125rem) {
+  .slider-container {
     margin-bottom: 5.625rem;
   }
 }
@@ -455,7 +460,7 @@ a:active {
 .slider-controls {
   position: absolute;
   right: 0;
-  bottom: -5.625rem;
+  bottom: -3.75rem;
   display: flex;
   justify-content: center;
   background-color: var(--color-dark);
@@ -470,11 +475,13 @@ a:active {
 @media (width <= 48rem) {
   .slider-controls {
     width: 100%;
+    bottom: -7.5rem;
   }
 }
 @media (width <= 26.31125rem) {
   .slider-controls {
     height: 5.625rem;
+    bottom: -5.625rem;
   }
 }
 .slider-controls__count {
