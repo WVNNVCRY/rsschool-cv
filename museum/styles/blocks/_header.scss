@@ -5,6 +5,14 @@
   padding-block: rem(58);
   background-color: var(--color-dark);
 
+  @include tablet {
+    padding-block: rem(48);
+  }
+
+  @include mobile {
+    padding-block: rem(34);
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -25,6 +33,10 @@
     font-size: rem(22);
     font-weight: 100;
     letter-spacing: rem(2);
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__link {

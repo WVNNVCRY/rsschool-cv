@@ -1,5 +1,29 @@
 @use '../helpers' as *;
 
 .logo {
-  max-width: fluid(199, 131);
+  width: rem(189);
+  height: rem(33);
+
+  @include tablet {
+    width: rem(199);
+  }
+
+  @include mobile-s {
+    width: rem(131);
+    height: rem(20);
+  }
+
+  &__image {
+    width: rem(189);
+    height: rem(33);
+
+    @include tablet {
+      width: rem(199);
+    }
+
+    @include mobile-s {
+      width: rem(131);
+      height: rem(20);
+    }
+  }
 }
