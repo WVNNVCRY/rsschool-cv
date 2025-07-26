@@ -31,6 +31,16 @@
   position: absolute;
   top: 0;
   right: rem(20);
+
+  @include tablet {
+    bottom: rem(60);
+  }
+
+  @include mobile {
+    position: relative;
+    right: 0;
+    margin-bottom: rem(90);
+  }
 }
 
 .slider-images {
@@ -38,6 +48,22 @@
   width: rem(1000);
   height: rem(750);
   overflow: hidden;
+
+  @include tablet {
+    width: rem(700);
+    height: rem(525);
+  }
+
+  @include mobile {
+    align-self: center;
+    width: rem(728);
+    height: rem(546);
+  }
+
+  @include mobile-s {
+    width: rem(380);
+    height: rem(285);
+  }
 }
 
 .slider-img {
@@ -56,12 +82,24 @@
 .slider-controls {
   position: absolute;
   right: 0;
-  bottom: rem(-60);
+  bottom: rem(-90);
   display: flex;
   justify-content: center;
   background-color: var(--color-dark);
   width: rem(600);
   height: rem(120);
+
+  @include tablet {
+    width: rem(700);
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  @include mobile-s {
+    height: rem(90);
+  }
 
   &__count {
     display: flex;
@@ -70,6 +108,14 @@
     font-size: fluid(22, 16);
     line-height: 1.82;
     margin-right: rem(55);
+
+    @include tablet {
+      margin-right: rem(45);
+    }
+
+    @include mobile-s {
+      margin-right: rem(25);
+    }
   }
 
   &__dots {
@@ -77,6 +123,15 @@
     align-items: center;
     gap: rem(25);
     margin-right: rem(60);
+
+    @include tablet {
+      margin-right: rem(45);
+    }
+
+    @include mobile-s {
+      margin-right: rem(25);
+      gap: rem(10);
+    }
   }
 
   &__dot {
@@ -87,6 +142,14 @@
 
     &.active {
       background-color: var(--color-gold);
+    }
+
+    @include tablet {
+      @include square(rem(12));
+    }
+
+    @include mobile-s {
+      @include square(rem(7))
     }
   }
 
