@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .button {
+  border: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +13,14 @@
   font-size: fluid(22, 20);
   font-weight: 300;
   letter-spacing: rem(2);
+  text-align: center;
+
+  @include tablet {
+    width: rem(300);
+    height: rem(60);
+    font-size: rem(20);
+    padding: rem(24) rem(40);
+  }
 
   &:hover {
     background-color: var(--color-gold);

@@ -1,46 +1,88 @@
 @use '../helpers' as *;
 
-.comp-slider {
-
+.comp {
   &__container {
     position: relative;
-    display: grid;
-    place-content: center;
+    display: inline-block;
     overflow: hidden;
-    --position: 50%;
+
+    @include mobile {
+      width: rem(380);
+      height: rem(368);
+    }
   }
 
-  &__image-container {
-    max-width: rem(720);
-    max-height: rem(700);
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__image--before {
+  &__before {
     position: absolute;
-    inset: 0;
-    width: var(--position);
+    width: 61%;
+    overflow: hidden;
+
+    img {
+      width: auto;
+
+      @include mobile {
+        height: rem(368);
+      }
+    }
   }
 
-  &__range {
+  &__after {
+    &-img {
+      @include mobile {
+        height: rem(368);
+      }
+    }
+  }
+
+  &__btn {
+    @include square(rem(40));
+
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    cursor: ew-resize;
-  }
+    top: 50%;
+    left: 61.7%;
+    transform: translate(-61%, -50%);
+    background-color: transparent;
+    border-radius: 50%;
+    border: rem(5) solid var(--color-light);
+    cursor: col-resize;
+    z-index: 2;
 
-  &__button {
-    position: absolute;
-    inset: 0;
-    z-index: 10;
-    left: calc(var(--position) - rem(20));
-    pointer-events: none;
-  }
+    @include mobile {
+      @include square(rem(20));
 
+      border: rem(2) solid var(--color-light);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(35);
+      left: 43%;
+      width: rem(5);
+      height: rem(350);
+      background-color: var(--color-light);
+      z-index: 1;
+
+      @include mobile {
+        width: rem(2);
+        top: rem(17);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: rem(35);
+      left: 43%;
+      width: rem(5);
+      height: rem(350);
+      background-color: var(--color-light);
+      z-index: 1;
+
+      @include mobile {
+        width: rem(2);
+        bottom: rem(17);
+      }
+    }
+  }
 }

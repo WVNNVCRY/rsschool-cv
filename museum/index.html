@@ -20,21 +20,21 @@
     <div class="container">
       <div class="header__inner">
         <a class="header__logo logo" href="/" aria-label="Home" title="Home">
-          <img class="logo__image" src="./assets/Logo.svg" alt="Louvre logo" width="189" height="33" />
+          <img class="logo__image" src="./assets/Logo.svg" alt="Louvre logo">
         </a>
         <div class="header__overlay">
           <nav class="header__nav">
             <ul class="header__list">
-              <li class="header__item"><a href="#" class="header__link">Visiting</a></li>
-              <li class="header__item"><a href="#" class="header__link">Explore</a></li>
-              <li class="header__item"><a href="#" class="header__link">Video</a></li>
-              <li class="header__item"><a href="#" class="header__link">Gallery</a></li>
-              <li class="header__item"><a href="#" class="header__link">Tickets</a></li>
-              <li class="header__item"><a href="#" class="header__link">Contacts</a></li>
+              <li class="header__item"><a href="#visiting" class="header__link">Visiting</a></li>
+              <li class="header__item"><a href="#explore" class="header__link">Explore</a></li>
+              <li class="header__item"><a href="#video" class="header__link">Video</a></li>
+              <li class="header__item"><a href="#gallery" class="header__link">Gallery</a></li>
+              <li class="header__item"><a href="#tickets" class="header__link">Tickets</a></li>
+              <li class="header__item"><a href="#contacts" class="header__link">Contacts</a></li>
             </ul>
           </nav>
         </div>
-        <button class="header__burger-button burger-button visually-hidden" aria-label="Open menu" title="Open menu">
+        <button class="header__burger-button burger-button visible-tablet" aria-label="Open menu" title="Open menu">
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
           <span class="burger-button__line"></span>
@@ -53,11 +53,11 @@
         </div>
         <div class="slider-container">
           <div class="slider-images">
-            <img src="./assets/img/welcome-slider/1.jpg" alt="" class="slider-img block">
-            <img src="./assets/img/welcome-slider/2.jpg" alt="" class="slider-img">
-            <img src="./assets/img/welcome-slider/3.jpg" alt="" class="slider-img">
-            <img src="./assets/img/welcome-slider/4.jpg" alt="" class="slider-img">
-            <img src="./assets/img/welcome-slider/5.jpg" alt="" class="slider-img">
+            <img src="./assets/img/welcome-slider/1.jpg" alt="art" class="slider-img block">
+            <img src="./assets/img/welcome-slider/2.jpg" alt="art" class="slider-img">
+            <img src="./assets/img/welcome-slider/3.jpg" alt="art" class="slider-img">
+            <img src="./assets/img/welcome-slider/4.jpg" alt="art" class="slider-img">
+            <img src="./assets/img/welcome-slider/5.jpg" alt="art" class="slider-img">
           </div>
           <div class="slider-controls">
             <div class="slider-controls__count">
@@ -92,8 +92,9 @@
             </div>
           </div>
         </div>
+      </div>
     </section>
-    <section class="visiting">
+    <section class="visiting" id="visiting">
       <div class="container">
         <h2 class="visiting__title">
           Virtual tour
@@ -156,7 +157,7 @@
         </div>
       </div>
     </section>
-    <section class="explore">
+    <section class="explore" id="explore">
       <div class="explore__inner container">
         <div class="explore__content">
           <h2 class="explore__title">Picture explore</h2>
@@ -169,7 +170,16 @@
               it looked different.</p>
           </div>
         </div>
-        <div class="comp-slider__container">
+        <div class="comp__container">
+          <div class="comp__before">
+            <img src="./assets/img/explore-slider/before.jpg" alt="before image" class="comp__before-img">
+          </div>
+          <img src="./assets/img/explore-slider/after.jpg" alt="after image" class="comp__after-img">
+          <button class="comp__btn">
+
+          </button>
+        </div>
+        <!-- <div class="comp-slider__container">
           <div class="comp-slider__image-container">
             <img src="./assets/img/explore-slider/before.jpg" alt="before cleaning"
               class="comp-slider__image comp-slider__image--before">
@@ -188,11 +198,10 @@
               <path d="M17 368H22V700H17V368Z" fill="white" />
             </svg>
           </div>
-        </div>
-      </div>
+        </div> -->
       </div>
     </section>
-    <section class="video">
+    <section class="video" id="video">
       <div class="video__inner container">
         <div class="video__header">
           <h2 class="video__title">Video journey</h2>
@@ -200,35 +209,35 @@
             such as Mona Lisa or Hammurabi's Code</p>
         </div>
         <div class="video__player">
-          <img src="./assets/img/video-img/video-img.jpg" alt="" class="video__player-img">
+          <img src="./assets/img/video-img/video-img.jpg" alt="video" class="video__player-img">
           <button class="video__player-icon">
-            <img src="./assets/img/icons/video-btn.svg" alt="">
+            <img src="./assets/img/icons/video-btn.svg" alt="icon">
           </button>
         </div>
         <div class="video__controls">
-          <button class="video__player-play">
-            <img src="./assets/img/icons/controls-play.svg" alt="">
+          <button class="video__controls-play">
+            <img src="./assets/img/icons/controls-play.svg" alt="icon play">
           </button>
-          <div class="video__player-duration">
-            <img src="./assets/img/icons/controls-duration.svg" alt="">
+          <div class="video__controls-duration">
+            <img src="./assets/img/icons/controls-duration.svg" alt="icon duration">
           </div>
-          <button class="video__player-sound">
-            <img src="./assets/img/icons/controls-sound.svg" alt="">
+          <button class="video__controls-sound">
+            <img src="./assets/img/icons/controls-sound.svg" alt="icon sound">
           </button>
-          <div class="video__player-scroll">
-            <img src="./assets/img/icons/controls-scroll.svg" alt="">
+          <div class="video__controls-scroll">
+            <img src="./assets/img/icons/controls-scroll.svg" alt="icon scroll">
           </div>
-          <button class="video__player-screen">
-            <img src="./assets/img/icons/controls-screen.svg" alt="">
+          <button class="video__controls-screen">
+            <img src="./assets/img/icons/controls-screen.svg" alt="icon screen">
           </button>
         </div>
         <div class="video__slider">
           <div class="video__slider-items">
-            <img src="./assets/img/video-img/video-slide1.jpg" alt="" class="video__slider-item" width="452"
+            <img src="./assets/img/video-img/video-slide1.jpg" alt="video" class="video__slider-item" width="452"
               height="254">
-            <img src="./assets/img/video-img/video-slide2.jpg" alt="" class="video__slider-item" width="452"
+            <img src="./assets/img/video-img/video-slide2.jpg" alt="video" class="video__slider-item" width="452"
               height="254">
-            <img src="./assets/img/video-img/video-slide3.jpg" alt="" class="video__slider-item" width="452"
+            <img src="./assets/img/video-img/video-slide3.jpg" alt="video" class="video__slider-item" width="452"
               height="254">
           </div>
           <div class="video__slider-pagination">
@@ -249,7 +258,7 @@
         </div>
       </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <div class="gallery__inner container">
         <h2 class="gallery__title">Art Gallery</h2>
         <div class="gallery__content">
@@ -277,7 +286,7 @@
         </div>
       </div>
     </section>
-    <section class="tickets">
+    <section class="tickets" id="tickets">
       <div class="tickets__inner container">
         <h2 class="tickets__title">
           Buy Tickets
@@ -287,7 +296,7 @@
           <div class="tickets__form">
             <div class="tickets__type">
               <h4 class="tickets__type-title tickets__form-title">Tickets Type</h4>
-              <form action="" class="tickets__type-form">
+              <form class="tickets__type-form">
                 <div class="tickets__type-form--row">
                   <input id="radio-perv" type="radio" class="tickets__type-form--input custome-radio-hidden"
                     name="ticket-type">
@@ -338,7 +347,7 @@
     <div class="paralax-container">
       <div class="paralax-img"></div>
     </div>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <div class="contacts__inner container">
         <div class="contacts__header">
           <h2 class="contacts__title">Contacts</h2>
@@ -365,7 +374,7 @@
         <div class="footer__header">
           <div class="footer__content">
             <a class="footer__logo logo" href="/" aria-label="Home" title="Home">
-              <img class="logo__image" src="./assets/Logo.svg" alt="Louvre logo" width="189" height="33" />
+              <img class="logo__image" src="./assets/Logo.svg" alt="Louvre logo" width="189" height="33">
             </a>
             <nav class="footer__nav">
               <ul class="footer__list">
@@ -380,25 +389,36 @@
           </div>
           <div class="footer__social">
             <ul class="footer__social-list">
-              <a href="https://www.youtube.com/user/louvre" class="footer__social-link" aria-label="Youtube"
-                title="Youtube">
-                <img src="./assets/img/icons/youtube.svg" alt="Youtube icon" width="24" height="24">
-              </a>
-              <a href="https://www.instagram.com/museelouvre/" class="footer__social-link" aria-label="Instagram"
-                title="Instagram">
-                <img src="./assets/img/icons/instagram.svg" alt="Instagram icon" width="24" height="24">
-              </a>
-              <a href="https://www.facebook.com/museedulouvre" class="footer__social-link" aria-label="Facebook"
-                title="Facebook">
-                <img src="./assets/img/icons/facebook.svg" alt="Facebook icon" width="24" height="24">
-              </a>
-              <a href="http://twitter.com/museelouvre" class="footer__social-link" aria-label="Twitter" title="Twitter">
-                <img src="./assets/img/icons/twitter.svg" alt="Twitter icon" width="24" height="24">
-              </a>
-              <a href="https://www.pinterest.fr/museedulouvre/" class="footer__social-link" aria-label="Pinterest"
-                title="Pinterest">
-                <img src="./assets/img/icons/pinterest.svg" alt="Pinterest icon" width="24" height="24">
-              </a>
+              <li class="footer__social-item">
+                <a href="https://www.youtube.com/user/louvre" class="footer__social-link" aria-label="Youtube"
+                  title="Youtube">
+                  <img src="./assets/img/icons/youtube.svg" alt="Youtube icon" width="24" height="24">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a href="https://www.instagram.com/museelouvre/" class="footer__social-link" aria-label="Instagram"
+                  title="Instagram">
+                  <img src="./assets/img/icons/instagram.svg" alt="Instagram icon" width="24" height="24">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a href="https://www.facebook.com/museedulouvre" class="footer__social-link" aria-label="Facebook"
+                  title="Facebook">
+                  <img src="./assets/img/icons/facebook.svg" alt="Facebook icon" width="24" height="24">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a href="http://twitter.com/museelouvre" class="footer__social-link" aria-label="Twitter"
+                  title="Twitter">
+                  <img src="./assets/img/icons/twitter.svg" alt="Twitter icon" width="24" height="24">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a href="https://www.pinterest.fr/museedulouvre/" class="footer__social-link" aria-label="Pinterest"
+                  title="Pinterest">
+                  <img src="./assets/img/icons/pinterest.svg" alt="Pinterest icon" width="24" height="24">
+                </a>
+              </li>
             </ul>
           </div>
         </div>

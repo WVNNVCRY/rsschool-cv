@@ -11,6 +11,10 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -24,12 +28,38 @@
     padding-top: rem(150);
     background-color: var(--color-dark);
     background: linear-gradient(to right, var(--color-dark) 77%, rgba(0, 0, 0, 0));
+
+    @include tablet {
+      padding-bottom: rem(192);
+      padding-top: rem(50);
+    }
+
+    @include mobile {
+      padding-top: 0;
+      padding-bottom: rem(50);
+    }
   }
 
   &__title {
     line-height: 1.12;
     letter-spacing: rem(5);
     color: var(--color-light);
+
+    @include tablet {
+      line-height: 1.8;
+      font-size: rem(50);
+    }
+
+    @include mobile {
+      text-align: center;
+      font-size: rem(40);
+      line-height: 1.5;
+    }
+
+    @include mobile-s {
+      font-size: rem(28);
+      line-height: 1.43;
+    }
   }
 
   &__descr {
@@ -37,5 +67,26 @@
     letter-spacing: rem(2);
     font-weight: 300;
     margin-bottom: rem(75);
+
+    @include tablet {
+      font-size: rem(24);
+      margin-bottom: rem(50);
+    }
+
+    @include mobile {
+      margin-bottom: 0;
+      font-size: rem(20);
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  &__button {
+    @include mobile {
+      display: none;
+    }
   }
 }

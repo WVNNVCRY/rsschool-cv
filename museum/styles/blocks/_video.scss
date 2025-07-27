@@ -4,12 +4,29 @@
   background-color: var(--color-light);
   padding-bottom: rem(75);
 
+  @include tablet {
+    padding-bottom: rem(60);
+  }
+
   &__header {
     padding-top: rem(75);
     margin-bottom: rem(75);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+      padding-top: rem(60);
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__title {
+    @include tablet {
+      font-size: rem(50);
+      line-height: 1.5;
+      letter-spacing: rem(5);
+    }
   }
 
   &__descr {
@@ -17,12 +34,28 @@
     color: var(--color-dark);
     font-weight: 300;
     font-size: rem(22);
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__player {
     position: relative;
     height: rem(650);
     width: 100%;
+
+    @include tablet {
+      width: rem(984);
+      height: rem(444);
+    }
+
+    &-img {
+      @include tablet {
+        width: rem(984);
+        height: rem(444);
+      }
+    }
 
     & button {
       all: unset;
@@ -31,6 +64,9 @@
     &-icon img {
       @include abs-center;
 
+      @include tablet {
+        @include square(rem(152))
+      }
     }
   }
 
@@ -41,6 +77,45 @@
     padding: rem(25);
     background-color: var(--color-dark);
     margin-bottom: rem(40);
+
+    @include tablet {
+      padding-block: rem(15);
+      padding-inline: rem(40);
+    }
+
+    &-duration {
+      & img {
+        @include tablet {
+          width: rem(564);
+        }
+      }
+    }
+
+    &-sound {
+      & img {
+        @include tablet {
+          width: rem(26);
+          height: rem(20);
+        }
+      }
+    }
+
+    &-scroll {
+      & img {
+        @include tablet {
+          width: rem(143);
+          height: rem(13);
+        }
+      }
+    }
+
+    &-screen {
+      & img {
+        @include tablet {
+          @include square(rem(26))
+        }
+      }
+    }
 
     & button {
       all: unset
@@ -54,6 +129,12 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: rem(40);
+
+      & img {
+        @include tablet {
+          width: rem(300);
+        }
+      }
     }
 
     &-pagination {
