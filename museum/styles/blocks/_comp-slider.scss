@@ -5,6 +5,11 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
+
+    @include mobile {
+      width: rem(380);
+      height: rem(368);
+    }
   }
 
   &__before {
@@ -14,21 +19,39 @@
 
     img {
       width: auto;
+
+      @include mobile {
+        height: rem(368);
+      }
+    }
+  }
+
+  &__after {
+    &-img {
+      @include mobile {
+        height: rem(368);
+      }
     }
   }
 
   &__btn {
+    @include square(rem(40));
+
     position: absolute;
     top: 50%;
     left: 61.7%;
     transform: translate(-61%, -50%);
-    width: rem(40);
-    height: rem(40);
     background-color: transparent;
     border-radius: 50%;
     border: rem(5) solid var(--color-light);
     cursor: col-resize;
     z-index: 2;
+
+    @include mobile {
+      @include square(rem(20));
+
+      border: rem(2) solid var(--color-light);
+    }
 
     &::before {
       content: '';
@@ -39,6 +62,11 @@
       height: rem(350);
       background-color: var(--color-light);
       z-index: 1;
+
+      @include mobile {
+        width: rem(2);
+        top: rem(17);
+      }
     }
 
     &::after {
@@ -50,6 +78,11 @@
       height: rem(350);
       background-color: var(--color-light);
       z-index: 1;
+
+      @include mobile {
+        width: rem(2);
+        bottom: rem(17);
+      }
     }
   }
 }
