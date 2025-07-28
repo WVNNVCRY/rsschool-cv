@@ -8,6 +8,14 @@
     padding-bottom: rem(60);
   }
 
+  @include mobile {
+    padding-bottom: rem(80);
+  }
+
+  @include mobile-s {
+    padding-bottom: rem(40);
+  }
+
   &__header {
     padding-top: rem(75);
     margin-bottom: rem(75);
@@ -19,6 +27,15 @@
       padding-top: rem(60);
       margin-bottom: rem(40);
     }
+
+    @include mobile {
+      padding-top: rem(40);
+      margin-bottom: rem(20);
+    }
+
+    @include mobile-s {
+      padding-top: rem(36);
+    }
   }
 
   &__title {
@@ -26,6 +43,15 @@
       font-size: rem(50);
       line-height: 1.5;
       letter-spacing: rem(5);
+    }
+
+    @include mobile {
+      font-size: rem(40);
+    }
+
+    @include mobile-s {
+      font-size: rem(28);
+      line-height: 1.43;
     }
   }
 
@@ -50,10 +76,30 @@
       height: rem(444);
     }
 
+    @include mobile {
+      width: rem(728);
+      height: rem(329);
+    }
+
+    @include mobile-s {
+      width: rem(380);
+      height: rem(172);
+    }
+
     &-img {
       @include tablet {
         width: rem(984);
         height: rem(444);
+      }
+
+      @include mobile {
+        width: rem(728);
+        height: rem(329);
+      }
+
+      @include mobile-s {
+        width: rem(380);
+        height: rem(172);
       }
     }
 
@@ -67,10 +113,19 @@
       @include tablet {
         @include square(rem(152))
       }
+
+      @include mobile {
+        @include square(rem(80))
+      }
+
+      @include mobile-s {
+        @include square(rem(50))
+      }
     }
   }
 
   &__controls {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,10 +138,44 @@
       padding-inline: rem(40);
     }
 
+    @include mobile {
+      padding-block: rem(12);
+      padding-inline: rem(30);
+      margin-bottom: rem(20);
+    }
+
+    @include mobile-s {
+      padding-block: rem(16);
+      padding-inline: rem(20);
+      margin-bottom: rem(40);
+    }
+
+    &-play {
+      & img {
+        @include mobile-s {
+          width: rem(14);
+          height: rem(18);
+        }
+      }
+    }
+
     &-duration {
       & img {
         @include tablet {
           width: rem(564);
+        }
+
+        @include mobile {
+          position: absolute;
+          top: rem(-6);
+          left: 0;
+          width: rem(728);
+          height: rem(13);
+        }
+
+        @include mobile-s {
+          width: rem(380);
+          height: rem(10);
         }
       }
     }
@@ -97,6 +186,11 @@
           width: rem(26);
           height: rem(20);
         }
+
+        @include mobile-s {
+          width: rem(18);
+          height: rem(14);
+        }
       }
     }
 
@@ -106,6 +200,15 @@
           width: rem(143);
           height: rem(13);
         }
+
+        @include mobile {
+          width: rem(486);
+        }
+
+        @include mobile-s {
+          width: rem(200);
+          height: rem(10);
+        }
       }
     }
 
@@ -113,6 +216,10 @@
       & img {
         @include tablet {
           @include square(rem(26))
+        }
+
+        @include mobile-s {
+          @include square(rem(18))
         }
       }
     }
@@ -130,9 +237,25 @@
       align-items: center;
       margin-bottom: rem(40);
 
+      @include mobile {
+        margin-bottom: rem(20);
+      }
+
+      @include mobile-s {
+        margin-bottom: rem(40);
+      }
+
       & img {
         @include tablet {
           width: rem(300);
+        }
+
+        @include mobile {
+          width: rem(354);
+        }
+
+        @include mobile-s {
+          width: rem(180);
         }
       }
     }
@@ -157,6 +280,14 @@
       background-color: var(--color-gray);
       border: none;
       border-radius: 50%;
+
+      @include mobile {
+        @include square(rem(10))
+      }
+
+      @include mobile-s {
+        @include square(rem(8))
+      }
 
       &.active {
         background-color: var(--color-dark-gray);
