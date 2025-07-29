@@ -1439,16 +1439,16 @@ a:active {
 
 .tickets {
   background-color: var(--color-light);
-  padding-block: 4.6875rem;
+  padding-top: 4.6875rem;
 }
 @media (width <= 64rem) {
   .tickets {
-    padding-block: 3.75rem;
+    padding-top: 3.75rem;
   }
 }
 @media (width <= 48rem) {
   .tickets {
-    padding-block: 2.5rem;
+    padding-top: 2.5rem;
   }
 }
 .tickets__title {
@@ -1718,6 +1718,26 @@ a:active {
     font-size: 1rem;
   }
 }
+.tickets__paralax {
+  margin-top: 4.6875rem;
+  background-image: url(../assets/img/parallax.jpg);
+  width: 100%;
+  height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media (width <= 64rem) {
+  .tickets__paralax {
+    margin-top: 3.75rem;
+  }
+}
+@media (width <= 48rem) {
+  .tickets__paralax {
+    margin-top: 2.5rem;
+  }
+}
 
 .custome-radio-hidden {
   display: none;
@@ -1771,13 +1791,12 @@ a:active {
 }
 .paralax-img {
   background-image: url(../assets/img/parallax.jpg);
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 25rem;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: -100;
 }
 
