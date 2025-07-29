@@ -16,6 +16,12 @@
   }
 }
 
+.hidden-mobile--s {
+  @include mobile-s {
+    display: none !important;
+  }
+}
+
 // .visible-tablet {
 //   @include tablet {
 //     display: block !important;
