@@ -2,7 +2,15 @@
 
 .tickets {
   background-color: var(--color-light);
-  padding-block: rem(75);
+  padding-top: rem(75);
+
+  @include tablet {
+    padding-top: rem(60);
+  }
+
+  @include mobile {
+    padding-top: rem(40);
+  }
 
   &__title {
     padding-bottom: rem(25);
@@ -10,17 +18,60 @@
     margin-bottom: rem(75);
     letter-spacing: rem(5);
     line-height: 1.12;
+
+    @include tablet {
+      font-size: rem(50);
+      line-height: 1.5;
+      padding-bottom: rem(20);
+      margin-bottom: rem(60);
+    }
+
+    @include mobile {
+      margin-bottom: rem(40);
+      font-size: rem(40);
+    }
+
+    @include mobile-s {
+      font-size: rem(28);
+      line-height: 1.43;
+    }
   }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: rem(60);
+    overflow: hidden;
+
+    @include tablet {
+      gap: rem(80);
+      height: rem(460);
+    }
+
+    @include mobile {
+      gap: rem(60);
+      height: rem(439);
+    }
+
+    @include mobile-s {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(40);
+      height: auto;
+    }
   }
 
   &__img {
     width: rem(720);
-    height: rem(550);
+
+    @include tablet {
+      width: rem(700);
+    }
+
+    @include mobile {
+      width: rem(444);
+    }
   }
 
   &__form {
@@ -35,6 +86,11 @@
       text-transform: none;
       color: var(--color-dark);
       line-height: 0.95;
+
+      @include tablet {
+        font-size: rem(28);
+        line-height: 1;
+      }
     }
   }
 
@@ -42,6 +98,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(50);
+
+    @include tablet {
+      display: none;
+    }
 
     &-form {
       &--row {
@@ -64,8 +124,25 @@
     flex-direction: column;
     align-items: end;
 
+    @include tablet {
+      align-items: start;
+    }
+
+    @include mobile-s {
+      align-items: center;
+    }
+
     &-title {
       margin-bottom: rem(25);
+
+      @include mobile {
+        margin-bottom: rem(39);
+      }
+
+      @include mobile-s {
+        font-size: rem(16);
+        margin-bottom: rem(20);
+      }
     }
 
     &-counter {
@@ -74,20 +151,49 @@
       flex-direction: column;
       gap: rem(10);
 
+      @include tablet {
+        margin-bottom: rem(25);
+        gap: rem(25);
+      }
+
+      @include mobile {
+        margin-bottom: rem(29);
+      }
+
+      @include mobile-s {
+        margin-bottom: rem(40);
+      }
+
       &--basic,
       &--senior {
         display: flex;
         flex-direction: column;
         gap: rem(15);
+
+        @include tablet {
+          gap: rem(10);
+        }
+
+        @include mobile-s {
+          gap: rem(15);
+        }
       }
 
-      &--senior {
-        margin-bottom: rem(10);
-      }
+      // &--senior {
+      //   margin-bottom: rem(10);
+      // }
 
       &--descr {
         font-weight: 300;
         font-size: fluid(22, 16);
+
+        @include tablet {
+          font-size: rem(22);
+        }
+
+        @include mobile-s {
+          font-size: rem(16);
+        }
       }
 
       &--count {
@@ -98,6 +204,10 @@
         border: rem(3) solid var(--color-dark);
         padding: rem(12) rem(14);
         height: rem(50);
+
+        @include tablet {
+          width: rem(175);
+        }
 
         & .decrement,
         & .increment {
@@ -117,6 +227,26 @@
       margin-bottom: rem(60);
       font-weight: 700;
       font-size: fluid(28, 16);
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: rem(28);
+        letter-spacing: rem(1.65);
+        margin-bottom: rem(69);
+        width: rem(175);
+      }
+
+      @include mobile {
+        margin-bottom: rem(39);
+      }
+
+      @include mobile-s {
+        font-size: rem(16);
+        margin-bottom: rem(40);
+        justify-content: center;
+      }
     }
 
     &-btn {
@@ -135,6 +265,29 @@
         color: var(--color-dark);
         background-color: var(--color-gold);
       }
+
+      @include mobile-s {
+        font-size: rem(16);
+      }
+    }
+  }
+
+  &__paralax {
+    margin-top: rem(75);
+    background-image: url(../assets/img/parallax.jpg);
+    width: 100%;
+    height: rem(400);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    @include tablet {
+      margin-top: rem(60);
+    }
+
+    @include mobile {
+      margin-top: rem(40);
     }
   }
 }
