@@ -269,6 +269,9 @@ body {
   color: var(--color-light);
   background-color: var(--color-bg-dark);
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 h1,
 .h1,
@@ -377,12 +380,11 @@ a:active {
     display: none;
     position: absolute;
     left: 0;
-    bottom: -40rem;
+    bottom: -24rem;
     padding-top: 2.1875rem;
     padding-left: 3.4375rem;
     z-index: 100;
     width: 18.5625rem;
-    height: 36.5625rem;
     background-color: var(--color-dark);
   }
 }

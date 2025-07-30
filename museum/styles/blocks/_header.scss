@@ -39,12 +39,12 @@
       display: none;
       position: absolute;
       left: 0;
-      bottom: -40rem;
+      bottom: -24rem;
       padding-top: rem(35);
       padding-left: rem(55);
       z-index: 100;
       width: rem(297);
-      height: rem(585);
+      // height: 100vh;
       background-color: var(--color-dark);
     }
 

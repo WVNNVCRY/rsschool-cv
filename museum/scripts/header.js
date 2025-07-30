@@ -3,6 +3,7 @@ const headerList = document.querySelector('.header__list');
 const welcomeTitle = document.querySelector('.welcome__title');
 const welcomeDescr = document.querySelector('.welcome__descr');
 const welcomeButton = document.querySelector('.welcome__button');
+const bodyInner = document.body;
 const breakPoint = 1024;
 
 function toggleMenu() {
@@ -11,6 +12,7 @@ function toggleMenu() {
   welcomeTitle.classList.toggle('overlay--hidden');
   welcomeDescr.classList.toggle('overlay--hidden');
   welcomeButton.classList.toggle('overlay--hidden');
+  bodyInner.classList.toggle('no-scroll')
 }
 
 function resetMenuForDesktop() {
@@ -20,6 +22,7 @@ function resetMenuForDesktop() {
     welcomeTitle.classList.remove('overlay--hidden');
     welcomeDescr.classList.remove('overlay--hidden');
     welcomeButton.classList.remove('overlay--hidden');
+    bodyInner.classList.remove('no-scroll')
   }
 }
 
