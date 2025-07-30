@@ -14,6 +14,7 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,14 +37,55 @@
 
     @include tablet {
       display: none;
+      position: absolute;
+      left: 0;
+      bottom: -40rem;
+      padding-top: rem(35);
+      padding-left: rem(55);
+      z-index: 100;
+      width: rem(297);
+      height: rem(585);
+      background-color: var(--color-dark);
+    }
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  &__item {
+
+    &:last-child {
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: rem(25);
     }
   }
 
   &__link {
     transition-duration: var(--transitionduration);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(8);
+    justify-content: start;
+
+    & span {
+      display: none;
+      align-self: center;
+
+      @include tablet {
+        display: block;
+      }
+    }
 
     @include hover {
       color: var(--color-gold);
     }
+
+
   }
 }

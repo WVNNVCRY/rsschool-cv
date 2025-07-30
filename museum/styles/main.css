@@ -253,6 +253,15 @@ svg * {
     display: none !important;
   }
 }
+@media (width > 64rem) {
+  .visible-mobile .visible-tablet {
+    display: block !important;
+  }
+}
+
+html.is-lock {
+  overflow: hidden;
+}
 
 body {
   font-size: clamp(1rem, 0.79rem + 0.8vw, 1.75rem);
@@ -344,6 +353,7 @@ a:active {
   }
 }
 .header__inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -365,10 +375,45 @@ a:active {
 @media (width <= 64rem) {
   .header__list {
     display: none;
+    position: absolute;
+    left: 0;
+    bottom: -40rem;
+    padding-top: 2.1875rem;
+    padding-left: 3.4375rem;
+    z-index: 100;
+    width: 18.5625rem;
+    height: 36.5625rem;
+    background-color: var(--color-dark);
+  }
+}
+.header__list.is-active {
+  display: block;
+}
+@media (width <= 64rem) {
+  .header__item:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (width <= 64rem) {
+  .header__item {
+    margin-bottom: 1.5625rem;
   }
 }
 .header__link {
   transition-duration: var(--transitionduration);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  justify-content: start;
+}
+.header__link span {
+  display: none;
+  align-self: center;
+}
+@media (width <= 64rem) {
+  .header__link span {
+    display: block;
+  }
 }
 @media (any-hover: hover) {
   .header__link:hover {
@@ -715,6 +760,9 @@ a:active {
   letter-spacing: 0.3125rem;
   color: var(--color-light);
 }
+.welcome__title.overlay--hidden {
+  visibility: hidden;
+}
 @media (width <= 64rem) {
   .welcome__title {
     line-height: 1.8;
@@ -740,6 +788,9 @@ a:active {
   font-weight: 300;
   margin-bottom: 4.6875rem;
 }
+.welcome__descr.overlay--hidden {
+  visibility: hidden;
+}
 @media (width <= 64rem) {
   .welcome__descr {
     font-size: 1.5rem;
@@ -757,6 +808,9 @@ a:active {
   .welcome__descr {
     font-size: 1rem;
   }
+}
+.welcome__button.overlay--hidden {
+  visibility: hidden;
 }
 @media (width <= 48rem) {
   .welcome__button {

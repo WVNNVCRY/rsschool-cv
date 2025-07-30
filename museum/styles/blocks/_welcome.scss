@@ -45,6 +45,10 @@
     letter-spacing: rem(5);
     color: var(--color-light);
 
+    &.overlay--hidden {
+      visibility: hidden;
+    }
+
     @include tablet {
       line-height: 1.8;
       font-size: rem(50);
@@ -68,6 +72,10 @@
     font-weight: 300;
     margin-bottom: rem(75);
 
+    &.overlay--hidden {
+      visibility: hidden;
+    }
+
     @include tablet {
       font-size: rem(24);
       margin-bottom: rem(50);
@@ -85,6 +93,10 @@
   }
 
   &__button {
+    &.overlay--hidden {
+      visibility: hidden;
+    }
+
     @include mobile {
       display: none;
     }
