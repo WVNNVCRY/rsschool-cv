@@ -1,7 +1,17 @@
 @use 'helpers' as *;
 
+html {
+  &.is-lock {
+    overflow: hidden
+  }
+}
+
 body {
   @include fluid-text(28, 16);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 
   font-family: var(--font-family-base);
   color: var(--color-light);
