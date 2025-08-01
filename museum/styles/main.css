@@ -458,9 +458,13 @@ a:active {
 .header__link {
   transition-duration: var(--transitionduration);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   justify-content: start;
+}
+@media (width <= 64rem) {
+  .header__link {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (width <= 48rem) {
   .header__link {
