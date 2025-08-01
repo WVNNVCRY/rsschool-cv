@@ -3,8 +3,9 @@
 .comp {
   &__container {
     position: relative;
-    display: inline-block;
+    display: block;
     overflow: hidden;
+    align-items: center;
 
     @include mobile {
       width: rem(380);

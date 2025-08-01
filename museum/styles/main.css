@@ -1175,8 +1175,9 @@ a:active {
 
 .comp__container {
   position: relative;
-  display: inline-block;
+  display: block;
   overflow: hidden;
+  align-items: center;
 }
 @media (width <= 48rem) {
   .comp__container {

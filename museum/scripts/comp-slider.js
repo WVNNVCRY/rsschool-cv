@@ -7,13 +7,18 @@ let isDragging = false;
 
 function setSlider(x) {
   const rect = compContainer.getBoundingClientRect();
+  const btnRect = btn.getBoundingClientRect();
+  const btnWidth = btnRect.width;
+
+  // Ограничиваем так, чтобы центр кнопки не выходил за границы
   let offset = x - rect.left;
-  offset = Math.max(0, Math.min(offset, rect.width));
+  offset = Math.max(btnWidth / 2, Math.min(offset, rect.width - btnWidth / 2));
   const percent = (offset / rect.width) * 100;
   before.style.width = percent + '%';
   btn.style.left = percent + '%';
 }
 
+// Drag мышкой
 btn.addEventListener('mousedown', (e) => {
   isDragging = true;
   document.body.style.userSelect = 'none';
@@ -29,7 +34,7 @@ window.addEventListener('mouseup', () => {
   document.body.style.userSelect = '';
 });
 
-// Touch support
+// Drag touch
 btn.addEventListener('touchstart', (e) => {
   isDragging = true;
   document.body.style.userSelect = 'none';
@@ -43,6 +48,18 @@ window.addEventListener('touchmove', (e) => {
 window.addEventListener('touchend', () => {
   isDragging = false;
   document.body.style.userSelect = '';
+});
+
+// Клик по контейнеру (мышь)
+compContainer.addEventListener('click', (e) => {
+  if (e.target === btn) return; // не реагировать на клик по самой кнопке
+  setSlider(e.clientX);
+});
+
+// Клик по контейнеру (touch)
+compContainer.addEventListener('touchstart', (e) => {
+  if (e.target === btn) return;
+  setSlider(e.touches[0].clientX);
 });
 
 // Инициализация (по центру)
