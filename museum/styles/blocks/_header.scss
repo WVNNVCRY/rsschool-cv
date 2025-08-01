@@ -125,9 +125,12 @@
   &__link {
     transition-duration: var(--transitionduration);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: rem(8);
     justify-content: start;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @include mobile {
       grid-template-columns: rem(102) 1fr;
