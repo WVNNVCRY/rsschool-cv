@@ -1175,8 +1175,9 @@ a:active {
 
 .comp__container {
   position: relative;
-  display: inline-block;
+  display: block;
   overflow: hidden;
+  align-items: center;
 }
 @media (width <= 48rem) {
   .comp__container {
@@ -1208,7 +1209,7 @@ a:active {
   position: absolute;
   top: 50%;
   left: 61.7%;
-  transform: translate(-61%, -50%);
+  transform: translate(-52%, -50%);
   background-color: transparent;
   border-radius: 50%;
   border: 0.3125rem solid var(--color-light);
