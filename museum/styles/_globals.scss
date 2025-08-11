@@ -84,3 +84,12 @@ a {
     color: var(--color-gold-dark)
   }
 }
+
+input[type='range'] {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  block-size: 5px;
+  outline: none;
+  background: linear-gradient(to right, var(--color-accent)50%, var(--color-line) 50%);
+}

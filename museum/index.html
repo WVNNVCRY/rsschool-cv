@@ -265,7 +265,9 @@
             such as Mona Lisa or Hammurabi's Code</p>
         </div>
         <div class="video__player">
-          <img src="./assets/img/video-img/video-img.jpg" alt="video" class="video__player-img">
+          <video poster="./assets/video/poster0.jpg" class="video__player-img">
+            <source src="./assets/video/video0.mp4" type="video/mp4">
+          </video>
           <button class="video__player-icon">
             <img src="./assets/img/icons/video-btn.svg" alt="icon">
           </button>
@@ -274,15 +276,11 @@
           <button class="video__controls-play">
             <img src="./assets/img/icons/controls-play.svg" alt="icon play">
           </button>
-          <div class="video__controls-duration">
-            <img src="./assets/img/icons/controls-duration.svg" alt="icon duration">
-          </div>
+          <input type="range" value="0" min="0" max="100" step="0.1" class="video__controls-duration">
           <button class="video__controls-sound">
             <img src="./assets/img/icons/controls-sound.svg" alt="icon sound">
           </button>
-          <div class="video__controls-scroll hidden-mobile">
-            <img src="./assets/img/icons/controls-scroll.svg" alt="icon scroll">
-          </div>
+          <input type="range" value="0.5" min="0" max="1" step="0.01" class="video__controls-scroll hidden-mobile">
           <div class="video__controls-scroll visible-mobile">
             <img src="./assets/img/icons/controls-scroll-mobile.svg" alt="icon scroll">
           </div>
@@ -362,19 +360,19 @@
                 <div class="tickets__type-form--row">
                   <input id="radio-perv" type="radio" class="tickets__type-form--input custome-radio-hidden"
                     name="ticket-type">
-                  <div class="custome-radio"></div>
+                  <div class="custome-radio checked" id="type-permanent"></div>
                   <label for="radio-perv" class="tickets__type-form--label">Permanent exhibition</label>
                 </div>
                 <div class="tickets__type-form--row">
                   <input id="radio-temp" type="radio" class="tickets__type-form--input custome-radio-hidden"
                     name="ticket-type">
-                  <div class="custome-radio"></div>
+                  <div class="custome-radio" id="type-temporary"></div>
                   <label for="radio-temp" class="tickets__type-form--label">Temporary exhibition</label>
                 </div>
                 <div class="tickets__type-form--row">
                   <input id="radio-comb" type="radio" class="tickets__type-form--input custome-radio-hidden"
                     name="ticket-type">
-                  <div class="custome-radio"></div>
+                  <div class="custome-radio" id="type-combined"></div>
                   <label for="radio-comb" class="tickets__type-form--label">Combined Admission</label>
                 </div>
               </form>
@@ -385,21 +383,21 @@
                 <div class="tickets__amount-counter--basic">
                   <p class="tickets__amount-counter--descr">Basic 18+</p>
                   <div class="tickets__amount-counter--count">
-                    <p class="decrement">-</p>
-                    <p class="count">1</p>
-                    <p class="increment">+</p>
+                    <p class="decrement basic-decrement">-</p>
+                    <p class="count basic-count">0</p>
+                    <p class="increment basic-inrement">+</p>
                   </div>
                 </div>
                 <div class="tickets__amount-counter--senior">
                   <p class="tickets__amount-counter--descr">Senior 65+</p>
                   <div class="tickets__amount-counter--count">
-                    <p class="decrement">-</p>
-                    <p class="count">1</p>
-                    <p class="increment">+</p>
+                    <p class="decrement senior-decrement">-</p>
+                    <p class="count senior-count">0</p>
+                    <p class="increment senior-increment">+</p>
                   </div>
                 </div>
               </div>
-              <p class="tickets__amount-price">Total €<span>220</span></p>
+              <p class="tickets__amount-price">Total € <span>0</span></p>
               <button class="tickets__amount-btn">Buy Now</button>
             </div>
           </div>
@@ -498,12 +496,189 @@
         </div>
       </div>
     </footer>
+    <div class="tickets__dialog" id="ticketsDialog">
+      <div class="tickets__dialog-content">
+        <div class="tickets__dialog-left--col">
+          <div class="tickets__dialog-header">
+            <div class="tickets__dialog-header--body">
+              <img src="./assets/img/icons/dialo-logo.svg" alt="logo" class="tickets__dialog-logo--img">
+              <h1 class="tickets__dialog-header--title">
+                Booking tickets
+              </h1>
+            </div>
+            <p class="tickets__dialog-header--description">
+              Tour to Louvre
+            </p>
+          </div>
+          <form>
+            <div class="form__timing">
+              <div class="form__date">
+                <input type="date" min="2025-08-11" name="form-date" class="form__date-input" placeholder="14.08.2025">
+              </div>
+              <div class="form__time">
+                <select name="time" id="time" class="form__time-select">
+                  <option value="" disabled selected hidden>Time</option>
+                  <option value="09:00">09:00</option>
+                  <option value="09:30">09:30</option>
+                  <option value="10:00">10:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:00">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:00">17:30</option>
+                  <option value="18:00">18:00</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__personality">
+              <div class="form__personality-name form__personality-input">
+                <input type="text" name="name" id="name" placeholder="Name">
+              </div>
+              <div class="form__personality-email form__personality-input">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+              </div>
+              <div class="form__personality-phone form__personality-input">
+                <input type=" tel" name="tel" id="tel" placeholder="Phone">
+              </div>
+            </div>
+            <div class="form__type">
+              <select name="type" id="type">
+                <option value="permanent">Permanent exhibition</option>
+                <option value="temporary">Temporary exhibition</option>
+                <option value="combined">Combined Admission</option>
+              </select>
+            </div>
+            <div class="form__count">
+              <h4 class="form__count-title">Entry Ticket</h4>
+              <div class="form__count-basic">
+                <p class="form__count-basic--descr">
+                  Basic 18+ (<span class="form__count-basic--price">20</span> €)
+                </p>
+                <div class="form__count-counter">
+                  <button>-</button>
+                  <span class="form__count-counter--number" id="basic-type">1</span>
+                  <button>+</button>
+                </div>
+              </div>
+              <div class="form__count-senior">
+                <p class="form__count-senior--descr">
+                  Senior 65+ (<span class="form__count-senior--price">10</span> €)
+                </p>
+                <div class="form__count-counter">
+                  <button>-</button>
+                  <span class="form__count-counter--number" id="senior-type">1</span>
+                  <button>+</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="tickets__dialog-right--col">
+          <div class="overview">
+            <div class="overview__details">
+              <div class="overview_details-content">
+                <h3 class="overview__details-title">Overview</h3>
+                <p class="overview__details-descr">Tour to Louvre</p>
+                <ul class="overview__details-list">
+                  <li class="overview__details-item" id="overview-date">Not selected</li>
+                  <li class="overview__details-item" id="overview-time">Not selected</li>
+                  <li class="overview__details-item" id="ovewview-type">Not selected</li>
+                </ul>
+              </div>
+              <img src="./assets/img/summary-img.png" alt="Louvre" class="overview__details-img">
+            </div>
+            <div class="overview__tickets">
+              <div class="overview__tickets-row">
+                <p class="overview__tickets-descr"><span class="overview__tickets-count">0</span> Bacis (10 €)</p>
+                <p class="overview__tickets-price"><span class="overview__tickets-price-count">-</span> €</p>
+              </div>
+              <div class="overview__tickets-row">
+                <p class="overview__tickets-descr"><span class="overview__tickets-count">0</span> Senior (10 €)</p>
+                <p class="overview__tickets-price"><span class="overview__tickets-price-count">-</span> €</p>
+              </div>
+              <div class="overview__tickets-total">
+                <p class="overview__tickets-total-descr">Total:</p>
+                <p class="overview__tickets-total-price"><span class="overview__tickets-total-count">-</span> €</p>
+              </div>
+            </div>
+            <div class="overview__card card">
+              <div class="card__back">
+                <div class="card__back-line"></div>
+                <div class="card__back-cvc">
+                  <label for="cvc">CVC/CVV</label>
+                  <input type="text" id="cvc" maxlength="4">
+                  <small>The last
+                    3 or 4 digits
+                    on back
+                    of the card</small>
+                </div>
+              </div>
+              <div class="card__front">
+                <form>
+                  <div class="card__front-number">
+                    <label for="number">Card Number</label>
+                    <input type="number" name="number" id="number" placeholder="1234 5678 9012 3456">
+                  </div>
+                  <div class="card__front-expiration">
+                    <label>Expiration date</label>
+                    <div class="card__front-date">
+                      <select name="mounth" id="mounth">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08" selected>08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <input type="number" name="year" id="year" placeholder="2025" min="2025">
+                    </div>
+                  </div>
+                  <div class="card__holder">
+                    <label for="holder">Cardholder name</label>
+                    <input type="text" name="holder" id="holder" placeholder="Full Name">
+                  </div>
+                  <div class="card__logos">
+                    <img src="./assets/img/icons/visa.svg" alt="visa">
+                    <img src="./assets/img/icons/Mastercard.svg" alt="Mastercard">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button class="overview__btn">Book</button>
+          </div>
+        </div>
+        <button class="tickets__dialog-close">
+          <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L26 26" stroke="#030303" />
+            <path d="M26 1L1 26" stroke="#030303" />
+          </svg>
+        </button>
+      </div>
+    </div>
   </main>
-  <script src=".//scripts/header.js"></script>
+  <script src="./scripts/header.js"></script>
   <script src="./scripts/welcome-slider.js"></script>
   <script src="./scripts/comp-slider.js"></script>
   <script src="./scripts/custome-radio.js"></script>
-
+  <script src="./scripts/ticket-counter.js"></script>
+  <script src="./scripts/tickets-dialog.js"></script>
+  <script src="./scripts/dialog.js"></script>
 </body>
 
 </html>

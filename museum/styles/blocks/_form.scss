@@ -1,0 +1,223 @@
+@use '../helpers' as *;
+
+.form {
+  &__timing {
+    display: flex;
+    gap: rem(20);
+  }
+
+  &__date {
+    height: rem(45);
+
+    &-input {
+      position: relative;
+      padding-left: rem(45);
+      padding-block: rem(15);
+      padding-right: rem(15);
+      height: 100%;
+      width: rem(190);
+      border: rem(1) solid var(--color-dark);
+      background-color: transparent;
+
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: 1;
+
+      &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+
+      &::before {
+        content: url(../assets/img/icons/date-form.svg);
+        position: absolute;
+        left: rem(15);
+        top: rem(14);
+      }
+
+      &::after {
+        @include square(rem(17));
+        content: url(../assets/img/icons/arrow-form.svg);
+        position: absolute;
+        right: rem(15);
+        top: rem(12);
+      }
+    }
+  }
+
+  &__time {
+    height: rem(45);
+    position: relative;
+
+    &::before {
+      content: url(../assets/img/icons/time-form.svg);
+      position: absolute;
+      left: rem(15);
+      top: rem(3);
+    }
+
+    &::after {
+      @include square(rem(17));
+      content: url(../assets/img/icons/arrow-form.svg);
+      position: absolute;
+      right: rem(15);
+      top: rem(3);
+    }
+
+    &-select {
+      appearance: none;
+      padding-left: rem(45);
+      padding-block: rem(12);
+      padding-right: rem(15);
+      height: 100%;
+      width: rem(190);
+      border: rem(1) solid var(--color-dark);
+
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+
+  &__personality {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    &-input {
+      height: rem(45);
+
+      & input {
+        border: rem(1) solid var(--color-dark);
+        width: 100%;
+        height: 100%;
+        padding-left: rem(45);
+        padding-block: rem(12);
+        padding-right: rem(15);
+
+        font-size: rem(18);
+        font-weight: 400;
+        line-height: 1;
+      }
+    }
+
+    &-name {
+      position: relative;
+
+      &::before {
+        content: url(../assets/img/icons/name-form.svg);
+        position: absolute;
+        left: rem(15);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-email {
+      position: relative;
+
+      &::before {
+        content: url(../assets/img/icons/email-form.svg);
+        position: absolute;
+        left: rem(15);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-phone {
+      position: relative;
+
+      &::before {
+        content: url(../assets/img/icons/tel-form.svg);
+        position: absolute;
+        left: rem(15);
+        top: 50%;
+        transform: translateY(-40%);
+      }
+    }
+  }
+
+  &__type {
+    height: rem(45);
+    position: relative;
+
+    &::before {
+      content: url(../assets/img/icons/type-form.svg);
+      position: absolute;
+      left: rem(15);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      @include square(rem(17));
+      content: url(../assets/img/icons/arrow-form.svg);
+      position: absolute;
+      right: rem(15);
+      top: rem(3);
+    }
+
+    & select {
+      appearance: none;
+      height: 100%;
+      width: 100%;
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: 1;
+      padding-left: rem(45);
+      padding-block: rem(12);
+      padding-right: rem(15);
+    }
+  }
+
+  &__count {
+    border: rem(1) solid var(--color-dark);
+    padding-block: rem(10) rem(15);
+    padding-inline: rem(15);
+
+    &-title {
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: 1;
+      padding-bottom: rem(5);
+      border-bottom: rem(2) solid var(--color-accent);
+      margin-bottom: rem(15);
+    }
+
+    &-basic {
+      margin-bottom: rem(20);
+    }
+
+    &-basic,
+    &-senior {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--color-dark);
+      font-size: rem(18);
+      font-weight: 400;
+
+      & button {
+        border: none;
+        width: rem(35);
+        height: rem(25);
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        line-height: 1;
+      }
+    }
+
+    &-counter {
+      display: flex;
+      border: rem(1) solid var(--color-dark);
+
+      &--number {
+        display: inline-block;
+        text-align: center;
+        width: rem(35);
+        height: rem(25);
+      }
+    }
+  }
+}
