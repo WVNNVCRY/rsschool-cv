@@ -87,6 +87,10 @@
     }
 
     &-img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+
       @include tablet {
         width: rem(984);
         height: rem(444);
@@ -133,6 +137,37 @@
     background-color: var(--color-dark);
     margin-bottom: rem(40);
 
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: var(--color-light);
+        cursor: pointer;
+      }
+
+      &::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: var(--color-light);
+        cursor: pointer;
+      }
+
+      &::-ms-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: var(--color-light); // ваш цвет
+        cursor: pointer;
+      }
+    }
+
     @include tablet {
       padding-block: rem(15);
       padding-inline: rem(40);
@@ -160,6 +195,9 @@
     }
 
     &-duration {
+      width: rem(929);
+      background: linear-gradient(to right, rgb(113, 7, 7) 0.5%, rgb(196, 196, 196) 0.5%);
+
       & img {
         @include tablet {
           width: rem(564);
