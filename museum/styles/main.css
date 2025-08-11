@@ -1901,6 +1901,7 @@ input[type=range] {
 .tickets__amount-counter--count .decrement, .tickets__amount-counter--count .increment {
   font-size: 2rem;
   align-self: center;
+  cursor: pointer;
 }
 .tickets__amount-counter--count .count {
   font-size: 1.375rem;

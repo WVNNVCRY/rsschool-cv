@@ -360,19 +360,19 @@
                 <div class="tickets__type-form--row">
                   <input id="radio-perv" type="radio" class="tickets__type-form--input custome-radio-hidden"
                     name="ticket-type">
-                  <div class="custome-radio"></div>
+                  <div class="custome-radio checked" id="type-permanent"></div>
                   <label for="radio-perv" class="tickets__type-form--label">Permanent exhibition</label>
                 </div>
                 <div class="tickets__type-form--row">
                   <input id="radio-temp" type="radio" class="tickets__type-form--input custome-radio-hidden"
                     name="ticket-type">
-                  <div class="custome-radio"></div>
+                  <div class="custome-radio" id="type-temporary"></div>
                   <label for="radio-temp" class="tickets__type-form--label">Temporary exhibition</label>
                 </div>
                 <div class="tickets__type-form--row">
                   <input id="radio-comb" type="radio" class="tickets__type-form--input custome-radio-hidden"
                     name="ticket-type">
-                  <div class="custome-radio"></div>
+                  <div class="custome-radio" id="type-combined"></div>
                   <label for="radio-comb" class="tickets__type-form--label">Combined Admission</label>
                 </div>
               </form>
@@ -383,21 +383,21 @@
                 <div class="tickets__amount-counter--basic">
                   <p class="tickets__amount-counter--descr">Basic 18+</p>
                   <div class="tickets__amount-counter--count">
-                    <p class="decrement">-</p>
-                    <p class="count">1</p>
-                    <p class="increment">+</p>
+                    <p class="decrement basic-decrement">-</p>
+                    <p class="count basic-count">0</p>
+                    <p class="increment basic-inrement">+</p>
                   </div>
                 </div>
                 <div class="tickets__amount-counter--senior">
                   <p class="tickets__amount-counter--descr">Senior 65+</p>
                   <div class="tickets__amount-counter--count">
-                    <p class="decrement">-</p>
-                    <p class="count">1</p>
-                    <p class="increment">+</p>
+                    <p class="decrement senior-decrement">-</p>
+                    <p class="count senior-count">0</p>
+                    <p class="increment senior-increment">+</p>
                   </div>
                 </div>
               </div>
-              <p class="tickets__amount-price">Total €<span>220</span></p>
+              <p class="tickets__amount-price">Total € <span>0</span></p>
               <button class="tickets__amount-btn">Buy Now</button>
             </div>
           </div>
@@ -519,14 +519,23 @@
                 <select name="time" id="time" class="form__time-select">
                   <option value="" disabled selected hidden>Time</option>
                   <option value="09:00">09:00</option>
+                  <option value="09:30">09:30</option>
                   <option value="10:00">10:00</option>
+                  <option value="10:30">10:30</option>
                   <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
                   <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
                   <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
                   <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
                   <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
                   <option value="16:00">16:00</option>
+                  <option value="16:00">16:30</option>
                   <option value="17:00">17:00</option>
+                  <option value="17:00">17:30</option>
                   <option value="18:00">18:00</option>
                 </select>
               </div>
@@ -667,6 +676,7 @@
   <script src="./scripts/welcome-slider.js"></script>
   <script src="./scripts/comp-slider.js"></script>
   <script src="./scripts/custome-radio.js"></script>
+  <script src="./scripts/ticket-counter.js"></script>
   <script src="./scripts/dialog.js"></script>
 </body>
 
