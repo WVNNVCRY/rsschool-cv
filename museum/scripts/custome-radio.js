@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
           otherRadio.nextElementSibling.classList.remove('checked');
         }
       });
+
+      // Вызываем пересчёт, если функция есть
+      if (typeof updateExhibition === 'function') {
+        updateExhibition();
+      }
     });
 
     // Инициализация начального состояния

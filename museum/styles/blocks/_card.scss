@@ -1,0 +1,145 @@
+@use '../helpers' as *;
+
+.card {
+  position: relative;
+  inline-size: rem(360);
+  block-size: rem(210);
+  margin-block: rem(10) rem(56);
+
+  &__back {
+    position: absolute;
+    top: rem(30);
+    left: rem(110);
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: #939393;
+    border-radius: rem(8);
+    padding-block: rem(25) rem(15);
+    z-index: 0;
+
+    &-line {
+      block-size: rem(45);
+      background-color: var(--color-dark);
+    }
+
+    &-cvc {
+      font-size: rem(12);
+      padding-inline: rem(15) rem(20);
+      inline-size: rem(110);
+      margin-inline-start: rem(250);
+      margin-block-start: rem(15);
+
+      & input {
+        appearance: none;
+        height: rem(36);
+        padding: rem(10);
+        width: 100%;
+        margin-top: rem(4);
+        margin-bottom: rem(4);
+        border: none;
+      }
+
+      & small {
+        font-size: rem(10);
+      }
+    }
+  }
+
+  &__front {
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: #BCBCBC;
+    border-radius: rem(8);
+    padding-block: rem(15);
+    padding-inline: rem(20);
+    z-index: 1;
+    box-sizing: border-box;
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+    }
+
+    &-number {
+      display: flex;
+      flex-direction: column;
+
+      & label {
+        font-size: rem(12);
+        line-height: 1;
+        color: var(--color-dark);
+        margin-bottom: rem(5);
+      }
+
+      & input {
+        inline-size: rem(215);
+        height: rem(36);
+        font-size: rem(12);
+        padding: rem(10);
+        border: rem(1) solid #A4A4A3;
+        font-weight: 400;
+      }
+    }
+
+    &-expiration {
+      display: flex;
+      flex-direction: column;
+
+      & label {
+        font-size: rem(12);
+        line-height: 1;
+        color: var(--color-dark);
+        margin-bottom: rem(5);
+      }
+    }
+
+    &-date {
+      display: flex;
+      gap: rem(15);
+
+      & select,
+      input {
+        appearance: none;
+        inline-size: rem(100);
+        height: rem(36);
+        padding: rem(10);
+        border: rem(1) solid #A4A4A3;
+        font-weight: 400;
+        font-size: rem(12);
+      }
+    }
+  }
+
+  &__holder {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      font-size: rem(12);
+      line-height: 1;
+      color: var(--color-dark);
+      margin-bottom: rem(5);
+    }
+
+    & input {
+      appearance: none;
+      inline-size: 100%;
+      height: rem(36);
+      padding: rem(10);
+      border: rem(1) solid #A4A4A3;
+      font-weight: 400;
+      font-size: rem(12);
+    }
+  }
+
+  &__logos {
+    position: absolute;
+    top: rem(34);
+    right: rem(20);
+    display: flex;
+    flex-direction: column;
+    gap: rem(15);
+  }
+}
