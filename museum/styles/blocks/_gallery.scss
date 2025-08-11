@@ -17,10 +17,38 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: rem(36);
 
+    @include tablet {
+      height: rem(1400);
+    }
+
+    @include mobile {
+      height: rem(1180);
+    }
+
+    @include mobile-s {
+      height: rem(717);
+    }
+
     &-col {
       display: flex;
       flex-direction: column;
       row-gap: rem(24);
+
+      @include tablet {
+        width: rem(304);
+      }
+
+      @include mobile {
+        width: rem(352);
+
+        &:last-child {
+          display: none;
+        }
+      }
+
+      @include mobile-s {
+        width: rem(178);
+      }
 
       &.indent {
         padding-top: rem(50);

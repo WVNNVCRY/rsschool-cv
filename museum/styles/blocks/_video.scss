@@ -171,6 +171,7 @@
     @include tablet {
       padding-block: rem(15);
       padding-inline: rem(40);
+      gap: rem(30);
     }
 
     @include mobile {
