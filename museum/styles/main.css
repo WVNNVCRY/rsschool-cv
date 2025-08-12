@@ -2373,7 +2373,7 @@ input[type=range] {
 
 .tickets__dialog {
   width: 100%;
-  padding-block: 5.6875rem;
+  padding-block: 2.1875rem;
   display: none;
   position: fixed;
   z-index: 1000;
@@ -2388,7 +2388,7 @@ input[type=range] {
 .tickets__dialog-content {
   width: 100%;
   height: 100%;
-  padding-block: 5.6875rem;
+  padding-block: 3.75rem;
   display: flex;
   justify-content: center;
   gap: 2.5rem;
