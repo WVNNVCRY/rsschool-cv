@@ -4,6 +4,14 @@
   &__timing {
     display: flex;
     gap: rem(20);
+
+    @include mobile {
+      justify-content: space-between;
+    }
+
+    @include mobile-s {
+      flex-direction: column;
+    }
   }
 
   &__date {
@@ -22,6 +30,14 @@
       font-size: rem(18);
       font-weight: 400;
       line-height: 1;
+
+      @include mobile {
+        width: rem(250);
+      }
+
+      @include mobile-s {
+        width: 100%;
+      }
 
       &::-webkit-calendar-picker-indicator {
         opacity: 0;
@@ -53,6 +69,14 @@
       position: absolute;
       left: rem(15);
       top: rem(3);
+
+      @include tablet {
+        top: rem(7);
+      }
+
+      @include mobile {
+        top: rem(10);
+      }
     }
 
     &::after {
@@ -61,6 +85,14 @@
       position: absolute;
       right: rem(15);
       top: rem(3);
+
+      @include tablet {
+        top: rem(7);
+      }
+
+      @include mobile {
+        top: rem(10);
+      }
     }
 
     &-select {
@@ -75,6 +107,14 @@
       font-size: rem(18);
       font-weight: 400;
       line-height: 1;
+
+      @include mobile {
+        width: rem(250);
+      }
+
+      @include mobile-s {
+        width: 100%;
+      }
     }
   }
 
@@ -156,6 +196,14 @@
       position: absolute;
       right: rem(15);
       top: rem(3);
+
+      @include tablet {
+        top: rem(7);
+      }
+
+      @include mobile {
+        top: rem(10);
+      }
     }
 
     & select {
