@@ -10,9 +10,8 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -99,6 +98,7 @@
   </header>
 
   <main class="main">
+
     <section class="welcome">
       <div class="welcome__inner container">
         <div class="welcome__content">
@@ -150,6 +150,7 @@
         </div>
       </div>
     </section>
+
     <section class="visiting" id="visiting">
       <div class="container">
         <h2 class="visiting__title">
@@ -213,6 +214,7 @@
         </div>
       </div>
     </section>
+
     <section class="explore" id="explore">
       <div class="explore__inner container">
         <div class="explore__content">
@@ -235,28 +237,9 @@
 
           </button>
         </div>
-        <!-- <div class="comp-slider__container">
-          <div class="comp-slider__image-container">
-            <img src="./assets/img/explore-slider/before.jpg" alt="before cleaning"
-              class="comp-slider__image comp-slider__image--before">
-            <img src="./assets/img/explore-slider/after.jpg" alt="after cleaning"
-              class="comp-slider__image comp-slider__image--after">
-          </div>
-          <input type="range" min="0" max="100" value="50" class="comp-slider__range" id="comp-slider"
-            aria-label="Procentage of cleaning" title="Percentage of cleaning">
-          <div class="comp-slider__line"></div>
-          <div class="comp-slider__button" aria-hidden="true">
-            <svg width="40" height="700" viewBox="0 0 39 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M19.5 365C27.5081 365 34 358.508 34 350.5C34 342.492 27.5081 336 19.5 336C11.4919 336 5 342.492 5 350.5C5 358.508 11.4919 365 19.5 365ZM19.5 370C30.2696 370 39 361.27 39 350.5C39 339.73 30.2696 331 19.5 331C8.73045 331 0 339.73 0 350.5C0 361.27 8.73045 370 19.5 370Z"
-                fill="white" />
-              <path d="M17 0H22V332H17V0Z" fill="white" />
-              <path d="M17 368H22V700H17V368Z" fill="white" />
-            </svg>
-          </div>
-        </div> -->
       </div>
     </section>
+
     <section class="video" id="video">
       <div class="video__inner container">
         <div class="video__header">
@@ -276,12 +259,15 @@
           <button class="video__controls-play">
             <img src="./assets/img/icons/controls-play.svg" alt="icon play">
           </button>
+          <button class="video__controls-sound visible-mobile">
+            <img src="./assets/img/icons/controls-sound.svg" alt="icon sound">
+          </button>
           <input type="range" value="0" min="0" max="100" step="0.1" class="video__controls-duration">
-          <button class="video__controls-sound">
+          <button class="video__controls-sound hidden-mobile">
             <img src="./assets/img/icons/controls-sound.svg" alt="icon sound">
           </button>
           <input type="range" value="0.5" min="0" max="1" step="0.01" class="video__controls-scroll hidden-mobile">
-          <div class="video__controls-scroll visible-mobile">
+          <div class="video__controls-scroll visible-mobile hidden-mobile--s">
             <img src="./assets/img/icons/controls-scroll-mobile.svg" alt="icon scroll">
           </div>
           <button class="video__controls-screen">
@@ -315,6 +301,7 @@
         </div>
       </div>
     </section>
+
     <section class="gallery" id="gallery">
       <div class="gallery__inner container">
         <h2 class="gallery__title">Art Gallery</h2>
@@ -343,6 +330,7 @@
         </div>
       </div>
     </section>
+
     <section class="tickets" id="tickets">
       <div class="tickets__inner container">
         <h2 class="tickets__title">
@@ -405,6 +393,7 @@
       </div>
       <div class="tickets__paralax"></div>
     </section>
+
     <section class="contacts" id="contacts">
       <div class="contacts__inner container">
         <div class="contacts__header">
@@ -429,6 +418,7 @@
         </div>
       </div>
     </section>
+
     <footer class="footer">
       <div class="footer__inner container">
         <div class="footer__header">
@@ -496,15 +486,16 @@
         </div>
       </div>
     </footer>
+
     <div class="tickets__dialog" id="ticketsDialog">
       <div class="tickets__dialog-content">
         <div class="tickets__dialog-left--col">
           <div class="tickets__dialog-header">
             <div class="tickets__dialog-header--body">
               <img src="./assets/img/icons/dialo-logo.svg" alt="logo" class="tickets__dialog-logo--img">
-              <h1 class="tickets__dialog-header--title">
+              <h2 class="tickets__dialog-header--title">
                 Booking tickets
-              </h1>
+              </h2>
             </div>
             <p class="tickets__dialog-header--description">
               Tour to Louvre
@@ -513,7 +504,7 @@
           <form>
             <div class="form__timing">
               <div class="form__date">
-                <input type="date" min="2025-08-11" name="form-date" class="form__date-input" placeholder="14.08.2025">
+                <input type="date" min="2025-08-11" name="form-date" class="form__date-input">
               </div>
               <div class="form__time">
                 <select name="time" id="time" class="form__time-select">
@@ -548,7 +539,7 @@
                 <input type="email" name="email" id="email" placeholder="E-mail">
               </div>
               <div class="form__personality-phone form__personality-input">
-                <input type=" tel" name="tel" id="tel" placeholder="Phone">
+                <input type="tel" name="tel" id="tel" placeholder="Phone">
               </div>
             </div>
             <div class="form__type">
@@ -659,8 +650,9 @@
                   </div>
                 </form>
               </div>
+              <button class="overview__btn visible-mobile-s">Book</button>
             </div>
-            <button class="overview__btn">Book</button>
+            <button class="overview__btn hidden-mobile--s">Book</button>
           </div>
         </div>
         <button class="tickets__dialog-close">
@@ -671,6 +663,7 @@
         </button>
       </div>
     </div>
+
   </main>
   <script src="./scripts/header.js"></script>
   <script src="./scripts/welcome-slider.js"></script>

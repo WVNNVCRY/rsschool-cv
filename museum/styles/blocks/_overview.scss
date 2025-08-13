@@ -7,11 +7,27 @@
   align-self: flex-end;
   border: rem(1) solid var(--color-dark);
 
+  @include tablet {
+    padding: rem(20);
+  }
+
+  @include mobile {
+    margin-bottom: rem(40);
+  }
+
+  @include mobile-s {
+    block-size: rem(885);
+  }
+
   &__details {
     display: flex;
     justify-content: space-between;
     align-items: start;
     margin-bottom: rem(22);
+
+    @include tablet {
+      margin-bottom: rem(10);
+    }
 
     &-title {
       color: var(--color-dark);
@@ -138,5 +154,9 @@
     cursor: pointer;
     align-self: flex-end;
     font-weight: 300;
+
+    @include mobile-s {
+      align-self: flex-end;
+    }
   }
 }
