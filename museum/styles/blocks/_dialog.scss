@@ -11,41 +11,82 @@
   justify-content: center;
   align-items: center;
 
+  @include mobile {
+    padding-block: 0;
+  }
+
   &.active {
     display: flex;
   }
 
   &-content {
     width: 100%;
-    height: 100%;
+    height: 90vh;
     padding-block: rem(60);
     display: flex;
     justify-content: center;
     gap: rem(40);
     background: #fff;
     position: relative;
+    overflow-y: auto;
+
+    @include tablet {
+      padding-block: rem(40);
+    }
+
+    @include mobile {
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      padding-block: 0;
+    }
   }
 
   &-left--col {
     width: rem(400);
 
+    @include mobile {
+      width: rem(530);
+    }
+
+    @include mobile-s {
+      width: rem(360);
+    }
+
     & form {
       display: flex;
       flex-direction: column;
       gap: rem(35);
+
+      @include mobile-s {
+        gap: rem(20);
+      }
     }
   }
 
   &-right--col {
     width: rem(530);
+
+    @include mobile-s {
+      width: rem(360);
+    }
   }
 
   &-header {
+
+    @include mobile {
+      margin-top: rem(40);
+    }
 
     &--title {
       font-size: rem(50);
       line-height: 1;
       margin-bottom: rem(15);
+
+      @include mobile-s {
+        font-size: rem(32);
+      }
     }
 
     &--description {
@@ -54,6 +95,10 @@
       padding-bottom: rem(10);
       border-bottom: rem(3) solid var(--color-accent);
       margin-bottom: rem(60);
+
+      @include tablet {
+        margin-bottom: rem(30);
+      }
     }
   }
 
@@ -65,5 +110,16 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
+
+    @include tablet {
+      top: rem(-5);
+      right: rem(20);
+    }
+
+    & svg {
+      @include tablet {
+        @include square(rem(20))
+      }
+    }
   }
 }

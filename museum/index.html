@@ -10,9 +10,8 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -260,12 +259,15 @@
           <button class="video__controls-play">
             <img src="./assets/img/icons/controls-play.svg" alt="icon play">
           </button>
+          <button class="video__controls-sound visible-mobile">
+            <img src="./assets/img/icons/controls-sound.svg" alt="icon sound">
+          </button>
           <input type="range" value="0" min="0" max="100" step="0.1" class="video__controls-duration">
-          <button class="video__controls-sound">
+          <button class="video__controls-sound hidden-mobile">
             <img src="./assets/img/icons/controls-sound.svg" alt="icon sound">
           </button>
           <input type="range" value="0.5" min="0" max="1" step="0.01" class="video__controls-scroll hidden-mobile">
-          <div class="video__controls-scroll visible-mobile">
+          <div class="video__controls-scroll visible-mobile hidden-mobile--s">
             <img src="./assets/img/icons/controls-scroll-mobile.svg" alt="icon scroll">
           </div>
           <button class="video__controls-screen">
@@ -648,8 +650,9 @@
                   </div>
                 </form>
               </div>
+              <button class="overview__btn visible-mobile-s">Book</button>
             </div>
-            <button class="overview__btn">Book</button>
+            <button class="overview__btn hidden-mobile--s">Book</button>
           </div>
         </div>
         <button class="tickets__dialog-close">

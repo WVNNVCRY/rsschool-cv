@@ -6,6 +6,13 @@
   block-size: rem(210);
   margin-block: rem(10) rem(56);
 
+  @include mobile-s {
+    inline-size: rem(318);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
   &__back {
     position: absolute;
     top: rem(30);
@@ -16,6 +23,10 @@
     border-radius: rem(8);
     padding-block: rem(25) rem(15);
     z-index: 0;
+
+    @include mobile-s {
+      position: static;
+    }
 
     &-line {
       block-size: rem(45);
@@ -28,6 +39,10 @@
       inline-size: rem(110);
       margin-inline-start: rem(250);
       margin-block-start: rem(15);
+
+      @include mobile-s {
+        margin-inline-start: rem(208);
+      }
 
       & input {
         appearance: none;
@@ -55,6 +70,10 @@
     padding-inline: rem(20);
     z-index: 1;
     box-sizing: border-box;
+
+    @include mobile-s {
+      position: static;
+    }
 
     & form {
       display: flex;
@@ -141,5 +160,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(15);
+
+    @include mobile-s {
+      top: 125%;
+      right: rem(15);
+    }
   }
 }

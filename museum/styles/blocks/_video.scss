@@ -144,27 +144,37 @@
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 15px;
-        height: 15px;
+        width: rem(15);
+        height: rem(15);
         border-radius: 50%;
         background: var(--color-light);
         cursor: pointer;
       }
 
       &::-moz-range-thumb {
-        width: 15px;
-        height: 15px;
+        width: rem(15);
+        height: rem(15);
         border-radius: 50%;
         background: var(--color-light);
         cursor: pointer;
       }
 
       &::-ms-thumb {
-        width: 15px;
-        height: 15px;
+        width: rem(15);
+        height: rem(15);
         border-radius: 50%;
         background: var(--color-light); // ваш цвет
         cursor: pointer;
+
+        @include tablet {
+          width: rem(13);
+          height: rem(13);
+        }
+
+        @include mobile-s {
+          width: rem(10);
+          height: rem(10);
+        }
       }
     }
 
@@ -209,7 +219,7 @@
           top: rem(-6);
           left: 0;
           width: rem(728);
-          height: rem(13);
+          height: rem(13);  
         }
 
         @include mobile-s {
